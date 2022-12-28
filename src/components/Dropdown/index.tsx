@@ -89,7 +89,7 @@ export const DropdownComponent = (props: DropdownComponentProps) => {
     return (
         <div className={cx}>
             <Dropdown>
-                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                <Dropdown.Toggle variant="dropdown" id="dropdown-basic">
                     {selected || placeholder}
                     <ChevronIcon className="cr-dropdown__arrow" />
                 </Dropdown.Toggle>

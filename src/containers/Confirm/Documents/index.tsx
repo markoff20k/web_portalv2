@@ -136,7 +136,7 @@ class DocumentsComponent extends React.Component<Props, DocumentsState> {
 							className="pg-confirm__content-documents__row__content-number-dropdown"
 							list={this.data}
 							onSelect={onSelect}
-							placeholder={this.translate('page.body.kyc.documentsType.placeholder')}
+							placeholder='Selecionar tipo de documento'
 						/>
 					</div>
 					<div className="pg-confirm__content-documents__row">
@@ -145,7 +145,7 @@ class DocumentsComponent extends React.Component<Props, DocumentsState> {
 								type="string"
 								label={this.translate('page.body.kyc.documents.idNumber')}
 								labelVisible={true}
-								defaultLabel={''}
+								defaultLabel={'Número do documento'}
 								placeholder={this.translate('page.body.kyc.documents.idNumber.placeholder')}
 								inputValue={idNumber}
 								handleChangeInput={this.handleChangeIdNumber}
@@ -189,6 +189,7 @@ class DocumentsComponent extends React.Component<Props, DocumentsState> {
 							</div>
 						</fieldset>
 					</div>
+					<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
 					{this.state.documentsType ? (
 						<UploadFile
 							isMobileDevice={isMobileDevice}
@@ -217,7 +218,9 @@ class DocumentsComponent extends React.Component<Props, DocumentsState> {
 							uploadedFile={fileBack[0] && (fileBack[0] as File).name}
 						/>
 					) : null}
+					</div>
 					{this.state.documentsType ? (
+						<div style={{marginTop: '100px'}}> 
 						<UploadFile
 							isMobileDevice={isMobileDevice}
 							id="fileSelfie"
@@ -229,7 +232,8 @@ class DocumentsComponent extends React.Component<Props, DocumentsState> {
 							handleUploadScan={uploadEvent => this.handleUploadScan(uploadEvent, 'selfie')}
 							exampleImagePath={DocumentSelfieExample}
 							uploadedFile={fileSelfie[0] && (fileSelfie[0] as File).name}
-						/>
+						 />
+						 </div>
 					) : null}
 					<div className="pg-confirm__content-deep">
 						<Button

@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+
 export const ProfileQuickContainer: React.FC = () => {
 	const userActivity = useSelector(selectUserActivity);
 	const user = useSelector(selectUserInfo);

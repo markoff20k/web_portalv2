@@ -106,9 +106,9 @@ export class UploadFile extends React.Component<Props, State> {
 									<span className="pg-upload-file__content__form__info__text file">{uploadedFile}</span>
 								) : null}
 							</div>
-						</div>
-					</div>
-				</div>
+						
+				
+				
 				{exampleImagePath && !isMobileDevice ? (
 					<div className="pg-upload-file__doc-image">
 						<img src={exampleImagePath} alt={`${label} example`} />
@@ -119,6 +119,9 @@ export class UploadFile extends React.Component<Props, State> {
 						<FormattedMessage id={tipText} />
 					</span>
 				) : null}
+					</div>
+					</div>
+				</div>
 			</div>
 		);
 	}

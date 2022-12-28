@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
+
 import GradientBorder from '../../components/GradientBorder/GradientBorder';
 
 //import './KYCScreen.pcss';
