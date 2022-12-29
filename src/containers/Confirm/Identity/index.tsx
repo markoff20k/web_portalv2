@@ -173,7 +173,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 		return (
 			<div className="pg-confirm__content-identity">
 				<div className="pg-confirm__content-identity__forms">
-					<div className="pg-confirm__content-identity__forms__row input-group">
+					<div className="pg-confirm__content-identity__forms__row input-group-identity">
 						<fieldset className={firstNameGroupClass}>
 							<CustomInput
 								type="string"
@@ -182,7 +182,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								handleChangeInput={e => this.handleChange(e, 'firstName')}
 								autoFocus={true}
 								label={this.translate('page.body.kyc.identity.firstName')}
-								defaultLabel={''}
+								classNameLabel="pg-confirm__content-identity__forms__row__content__label"
+								defaultLabel={'Primeiro nome'}
 								handleFocusInput={this.handleFieldFocus('firstName')}
 							/>
 						</fieldset>
@@ -193,7 +194,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								handleChangeInput={e => this.handleChange(e, 'lastName')}
 								placeholder={this.translate('page.body.kyc.identity.lastName')}
 								label={this.translate('page.body.kyc.identity.lastName')}
-								defaultLabel={''}
+								classNameLabel="pg-confirm__content-identity__forms__row__content__label"
+								defaultLabel={'Sobrenome'}
 								handleFocusInput={this.handleFieldFocus('lastName')}
 							/>
 						</fieldset>
@@ -234,20 +236,21 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 							</div>
 						</fieldset>
 					</div>
-					<div className="pg-confirm__content-identity__forms__row">
+					<div className="pg-confirm__content-identity__forms__row input-group-identity">
 						<fieldset className={residentialAddressGroupClass}>
 							<CustomInput
 								type="string"
 								inputValue={residentialAddress}
 								placeholder={this.translate('page.body.kyc.identity.residentialAddress')}
 								label={this.translate('page.body.kyc.identity.residentialAddress')}
-								defaultLabel={''}
+								classNameLabel="pg-confirm__content-identity__forms__row__content__label"
+								defaultLabel={'Endereço residencial'}
 								handleChangeInput={e => this.handleChange(e, 'residentialAddress')}
 								handleFocusInput={this.handleFieldFocus('residentialAddress')}
 							/>
 						</fieldset>
 					</div>
-					<div className="pg-confirm__content-identity__forms__row input-group">
+					<div className="pg-confirm__content-identity__forms__row input-group2">
 						<fieldset className={cityGroupClass}>
 							<CustomInput
 								type="string"
@@ -255,20 +258,23 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 								handleChangeInput={e => this.handleChange(e, 'city')}
 								placeholder={this.translate('page.body.kyc.identity.city')}
 								label={this.translate('page.body.kyc.identity.city')}
-								defaultLabel={''}
+								classNameLabel="pg-confirm__content-identity__forms__row__content__label"
+								defaultLabel={'Ciade'}
 								handleFocusInput={this.handleFieldFocus('city')}
 							/>
 						</fieldset>
 						<fieldset className={postcodeGroupClass}>
 							<CustomInput
 								label={this.translate('page.body.kyc.identity.postcode')}
-								defaultLabel={this.translate('page.body.kyc.identity.postcode')}
+								defaultLabel="Código Postal"
 								type="string"
 								inputValue={postcode}
 								handleChangeInput={e => this.handleChange(e, 'postcode')}
 								onKeyPress={this.handleConfirmEnterPress}
 								placeholder={this.translate('page.body.kyc.identity.postcode')}
 								handleFocusInput={this.handleFieldFocus('postcode')}
+								classNameLabel="pg-confirm__content-identity__forms__row__content__label"
+								
 							/>
 						</fieldset>
 					</div>
