@@ -62,7 +62,7 @@ export const pt = {
 	'page.mobile.profileLinks.main.2fa': 'Autenticação 2FA',
 	'page.mobile.profileLinks.main.changePassword': 'Alterar senha',
 	'page.mobile.profileLinks.main.activity': 'Atividades da conta',
-	'page.mobile.profileLinks.main.apiKeys': 'Minhas chaves de API',
+	'page.mobile.profileLinks.main.apiKeys': 'Chaves de API',
 	'page.mobile.profileLinks.main.referral': 'Indicações',
 
 	'page.mobile.profileLinks.settings.language': 'Idioma',

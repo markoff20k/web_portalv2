@@ -315,7 +315,7 @@ export const pt = {
 	'page.body.profile.header.referralProgram': 'Link do seu código de indicação:',
 	'page.body.profile.content.copyLink': 'Copiar',
 
-	'page.body.profile.apiKeys.header': 'Minhas chaves de API',
+	'page.body.profile.apiKeys.header': 'Chaves de API',
 	'page.body.profile.apiKeys.header.create': 'Criar nova chave',
 
 	'page.body.profile.apiKeys.noOtp': 'Por favor, habilite o duplo fator de autenticação (2FA)',

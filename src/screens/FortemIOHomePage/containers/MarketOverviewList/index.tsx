@@ -141,7 +141,7 @@ export const MarketOverviewList = React.memo((props: MarketOverviewListProps) =>
 						<th>Ativo</th>
 						<th>Último preço (USD)</th>
 						<th>Variação 24h </th>
-						<th>Preço (USD)</th>
+						<th>Volume (USD)</th>
 						<th></th>
 					</tr>
 				</thead>

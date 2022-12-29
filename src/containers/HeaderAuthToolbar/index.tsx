@@ -27,6 +27,10 @@ const IconOrders = require('../../assets/svg/orders.svg');
 const IconLogout = require('../../assets/svg/logout.svg');
 const IconReferral = require('../../assets/svg/referral.svg');
 const IconSecurity = require('../../assets/svg/security2.svg');
+const IconDepositBRL = require('../../assets/svg/depositBRL.svg');
+const IconWithdrawBRL = require('../../assets/svg/withdrawBRL.svg');
+
+
 
 export const HeaderAuthToolbar: React.FC = () => {
 	const history = useHistory();
@@ -188,7 +192,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 							</div>
 						</Link>
 						<Link
-							to="/deposit"
+							to="/wallets/deposit/BRL"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('deposit');
@@ -196,20 +200,24 @@ export const HeaderAuthToolbar: React.FC = () => {
 						>
 
 							<div className={classActiveItemDrop('deposit')}>
-								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
-								{translate('page.body.homepage.header.deposit')}
+								{/* <FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" /> */}
+								<img src={IconDepositBRL} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+								{/* {translate('page.body.homepage.header.deposit')} */}
+								Depositar Reais
 							</div>
 						</Link>
 						<Link
-							to="/withdraw"
+							to="/wallets/withdraw/BRL"
 							onClick={() => {
 								setStateActiveNow('finance');
 								setActiveItemDrop('withdraw');
 							}}
 						>
 							<div className={classActiveItemDrop('withdraw')}>
-								<FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" />
-								{translate('page.body.homepage.header.withdraw')}
+								{/* <FaStar className="subheader__right-menu__dropdown__wrap__content__title__icon mr-2" /> */}
+								<img src={IconWithdrawBRL} className="mr-2 subheader__right-menu__item__title__svg" style={{width: '26px',}} />
+								{/* {translate('page.body.homepage.header.withdraw')} */}
+								Sacar Reais
 							</div>
 						</Link>
 					</div>

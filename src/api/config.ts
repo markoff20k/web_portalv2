@@ -47,6 +47,12 @@ export const defaultConfig: Config = {
 	passwordEntropyStep: 14,
 	showLanding: true,
 	sentryEnabled: false,
+	kycSteps: [
+        'email',
+        'profile',
+        'document',
+    ],
+
 
 };
 

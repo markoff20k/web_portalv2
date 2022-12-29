@@ -5250,8 +5250,8 @@ color: #F5F5F5 !important;
 .item1 {
 	align-self: center;
 	background: transparent;
-	color: #FDA736;
-	font-size: 19px;
+	color: #FDA736 !important;
+	font-size: 19px !important;
 	font-weight: 600;
 	grid-area: balance;
 	line-height: 1;
@@ -5262,9 +5262,9 @@ color: #F5F5F5 !important;
 .item2 {
 	align-self: center;
 	background: transparent;
-	color: var(--table-text-color);
-	font-size: 17px;
-	grid-area: lock;
+	color: var(--table-text-color) !important;
+	font-size: 17px !important;
+	grid-area: lock !important;
 	line-height: 1;
 	padding-left: 10%;
 	text-align: left;
@@ -5273,30 +5273,30 @@ color: #F5F5F5 !important;
 .item3 {
 	align-self: center;
 	background: transparent;
-	color: #FDA736;
-	font-size: 19px;
-	font-weight: 600;
-	grid-area: balance_amount;
-	text-align: right;
+	color: #FDA736 !important;
+	font-size: 19px !important;
+	font-weight: 600 !important;
+	grid-area: balance_amount!important;
+	text-align: right !important;
 }
 
 .item4 {
-	align-self: center;
-	background: transparent;
-	color: var(--table-text-color);
-	font-size: 17px;
-	grid-area: lock_amount;
-	text-align: right;
+	align-self: center !important;
+	background: transparent !important;
+	color: var(--table-text-color) !important;
+	font-size: 17px !important;
+	grid-area: lock_amount !important;
+	text-align: right !important;
 }
 
 .info-grid {
-	display: grid;
-	grid-gap: 10px;
+	display: grid !important;
+	grid-gap: 10px !important;
 	grid-template-areas:
 		'balance balance_amount'
 		'lock lock_amount';
-	padding: 10px;
-	width: 100%;
+	padding: 10px !important;
+	width: 100% !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -5340,19 +5340,20 @@ color: #F5F5F5 !important;
 		border: none;
 		color: #F5F5F5;
 		cursor: pointer;
-		font-size: 18px;
+		font-size: 22px;
 		outline: none;
+		opacity: 0.81
 	}
 
 #withdraw-info .withdraw-button {
 		background-color: transparent;
 		border: none;
 		
-		border-bottom: 2px solid var(--divider-color-level-2);
+		border-bottom: 2px solid #FDA736;
 		color: #F5F5F5;
 		cursor: pointer;
-		font-size: 18px;
-		margin-left: 1rem;
+		font-size: 22px;
+		margin-left: 2rem;
 		outline: none;
 	}
 
@@ -5460,7 +5461,7 @@ color: #F5F5F5 !important;
       }
 
 #deposit-address .react-tabs .rc-tabs-nav-list .rc-tabs-tab {
-              border-bottom: 2px solid transparent;
+              border-bottom: 2px solid #c0c0c0 !important;
               padding: 5px 0;
               transition: ease-in-out 0.2s;
               width: 100%;
@@ -5492,7 +5493,7 @@ color: #F5F5F5 !important;
       align-items: center;
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-     background: rgba(196, 196, 196, 0.18);
+      background: rgba(196, 196, 196, 0.18);
 	  border-radius: 10px !important;
 	  border-radius: 5px;
       content: '';
@@ -5516,10 +5517,10 @@ color: #F5F5F5 !important;
 #deposit-info .deposit-button {
 		background-color: transparent !important;
 		border: none;
-		border-bottom: 2px solid var(--divider-color-level-2);
+		border-bottom: 2px solid #FDA736;
 		color: #F5F5F5;
 		cursor: pointer;
-		font-size: 18px;
+		font-size: 22px !important;
 		outline: none;
 	}
 
@@ -5527,10 +5528,12 @@ color: #F5F5F5 !important;
 		background-color: transparent !important;
 		border: none;
 		color: #F5F5F5;
+		/* border-bottom: 2px solid var(--divider-color-level-2); */
 		cursor: pointer;
-		font-size: 18px;
-		margin-left: 1rem;
+		font-size: 22px;
+		margin-left: 2rem;
 		outline: none;
+		opacity: 0.81;
 	}
 
 .checkbox-input {
@@ -6418,7 +6421,7 @@ color: #F5F5F5 !important;
 .pg-profile-two-factor-auth__copyablefield fieldset .cr-deposit-crypto__copyable-title {
         
         position: relative;
-        width:100px !important;
+        width: 100px !important;
       }
 
 .pg-profile-two-factor-auth__copyablefield fieldset .pg-copyable-text-field__input {
@@ -7381,10 +7384,15 @@ th#react-table table:last-child {
 					justify-content: space-between !important;
 				}
 
-.pg-profile-page__referral fieldset .pg-copyable-text-field__input .input-group .custom-input label {
+.pg-profile-page__referral fieldset .pg-copyable-text-field__input .input-group .td-custom-input label {
 							margin-top: -10px;
 							z-index: 10;
-              color: #c0c0c0 !important;
+              				color: #c0c0c0 !important;
+						}
+
+.pg-profile-page__referral fieldset .pg-copyable-text-field__input .input-group .td-custom-input input {
+
+							background-color: #c0c0c0 !important;
 						}
 
 .pg-profile-page__referral fieldset .pg-copyable-text-field__input .btn-primary {
@@ -31798,7 +31806,7 @@ element.style {
 	}
 
 .td-deposit-crypto__copyable fieldset:focus .td-deposit-crypto__copyable-area, .td-deposit-crypto__copyable fieldset:focus-within .td-deposit-crypto__copyable-area {
-					border-color: var(--input-border-color-active);
+					border-color: transparent;
 				}
 
 .td-deposit-crypto__copyable .custom-input {
@@ -31813,7 +31821,7 @@ element.style {
 		}
 
 .td-deposit-crypto__copyable-area {
-			border: 1px solid var(--input-border-color);
+			border: 1px solid #009991;
 			margin-top: calc(var(--gap) * -1.1);
 		}
 
@@ -31828,18 +31836,18 @@ element.style {
 
 .td-deposit-crypto__copyable-area .input-group:first-child:focus-within {
 
-						border-color: var(--input-border-color-active);
+						border-color: #009991;
 
 
  
 }
 
 .td-deposit-crypto__copyable .td-copyable-text-field__input {
-				background: inherit;
+				background-color: #dde1e7;
 			}
 
 .td-deposit-crypto__copyable .td-copyable-text-field__input input {
-					background: unset;
+					background-color: #dde1e7 !important ;
 					color: var(--input-background-color);
 				}
 
@@ -36889,7 +36897,7 @@ element.style {
 				}
 
 .ant-modal-body {
-	background-color: var(--body-background-color);
+	background-color: var(--body-background-color) !imoprtant;
 	color: #737f92;
 }
 
@@ -38833,5 +38841,18 @@ element.style {
     background: blue !important;
 	margin-top: -60px !important;
 
+
+}
+
+.pg-blur__content__icon svg {
+		fill: #009991 !important;
+	}
+
+.cr-deposit-crypto__copyable-area .td-copyable-text-field .input-group .td-custom-input .form-control input {
+
+	
+				backgroud-color: blue !important;
+	
+	
 
 }

@@ -31,10 +31,8 @@ export const defaultConfig2: Config2 = {
     languages: ['pt', 'en'],
     kycSteps: [
         'email',
-        'phone',
         'profile',
         'document',
-        'address'
     ]
 };
 

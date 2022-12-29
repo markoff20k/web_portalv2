@@ -300,7 +300,7 @@ export const ProfileApiKeys: React.FC<ProfileApiKeysProps> = () => {
 	return (
 		<div className="td-pg-profile--bg td-pg-profile--radius td-pg-profile__content__item td-pg-profile__list-api-key">
 			<div className="td-pg-profile__content__item__header">
-				<div className="td-pg-profile__content__item__header__title">Minhas chaves de API</div>
+				<div className="td-pg-profile__content__item__header__title">Chaves de API</div>
 				<div className="td-pg-profile__content__item__header__action">
 					<button type="button" className="btnApiKey" onClick={handleCreateKeyClick}>
 						Criar chave

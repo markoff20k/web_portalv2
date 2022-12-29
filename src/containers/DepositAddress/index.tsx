@@ -144,12 +144,12 @@ export const DepositAddress: React.FC<DepositAddressProps> = (props: DepositAddr
 				style={{ backgroundColor: '#181819', padding: '30px', borderRadius: '5px', height: '100%', fontSize: '16px' }}
 			>
 				<div>
-					<div className="row">
+					{/* <div className="row">
 						<div className="col-12 d-flex justify-content-between">
 							<span>Blockchain</span>
 							<span>Tempo médio de processamento do blockchain: 5-10 minutos</span>
 						</div>
-					</div>
+					</div> */}
 					<div className="row">
 						<div className="col-12">
 							<div className="react-tabs">

@@ -88,12 +88,8 @@ export const ProfileAccountActivity: React.FC<ProfileAccountActivityProps> = () 
 
 	const TAB_LIST_INFO = [
 		{
-			label: 'Activity',
+			label: 'Últimas atividades na conta',
 			content: tabKeyActiveState === 'Activity' ? renderData('browserName') : null,
-		},
-		{
-			label: 'Device',
-			content: tabKeyActiveState === 'Device' ? renderData('deviceName') : null,
 		},
 	];
 

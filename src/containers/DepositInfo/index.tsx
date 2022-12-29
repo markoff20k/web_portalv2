@@ -122,7 +122,7 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 			value: currency.id,
 			label: (
 				<span>
-					<img style={{ width: '60px' }} src={findIcon(currency.id)} alt={currency.id} /> {currency.id.toUpperCase()} |{' '}
+					<img style={{ width: '2rem' }} src={findIcon(currency.id)} alt={currency.id} /> {currency.id.toUpperCase()} |{' '}
 					{currency.name.toUpperCase()}
 				</span>
 			),
@@ -162,7 +162,7 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 							isClearable={false}
 							onChange={handleChange}
 							options={options.filter(option => !allChildCurrencies.map(cur => cur.id).includes(option.value))}
-							placeholder="Localizar ativo"
+							placeholder="Trocar Moeda"
 							styles={SelectStyles}
 							tabSelectsValue={false}
 							value={options.filter(option => option.value.toLowerCase() === currency_id.toLowerCase())}

@@ -15,7 +15,7 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 
 export const DEFAULT_CCY_PRECISION = 2;
 export const STORAGE_DEFAULT_LIMIT = 200;
-export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 20;
+export const ORDER_BOOK_DEFAULT_SIDE_LIMIT = 30;
 export const DEFAULT_TRADING_VIEW_INTERVAL = '30';
 export const VALUATION_PRIMARY_CURRENCY = 'USD';
 export const VALUATION_SECONDARY_CURRENCY = 'USDT';
