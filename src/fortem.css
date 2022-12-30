@@ -1030,18 +1030,7 @@ flex-direction: row !important;
 	text-align: center;
 }
 
-.ant-modal-header {
-	background-color: blue;
-	color: '#F5F5F5';
-}
 
-.ant-modal-body {
-	background-color: purple;
-}
-
-.ant-modal-footer {
-	background-color: green;
-}
 
 .sale-detail-screen {
 	display: flex;
