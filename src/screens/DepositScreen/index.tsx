@@ -101,7 +101,7 @@ export const DepositScreen = () => {
 						wallets={wallets}
 					/>
 				</div>
-				<div className="col-6" style={{ margin: '40px 0' }}>
+				<div className="col-6" style={{ margin: '10px 0' }}>
 					<DepositAddress
 						currency_id={currency_id}
 						selectedCurrencyID={selectedCurrencyID ? selectedCurrencyID : currency_id}

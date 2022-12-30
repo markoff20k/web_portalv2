@@ -44,11 +44,18 @@ export const ProfileQuickContainer: React.FC = () => {
 	
 
 						</div>
-
-					</div>
-					<span className="td-pg-profile__quick__info--referral" style={{fontSize: '16px', marginRight: '10px'}}>
-								<ReferralProgram />
+						<div className="td-pg-profile--color--second td-pg-profile__quick__info--bottom">
+							<span className="td-pg-profile__quick__info--bottom__last-login--time mr-2" style={{fontSize: '16px'}}>
+								Nível de cadastro: 
 							</span>
+							<span className="td-pg-profile__quick__info--bottom__last-login--ip" style={{marginLeft: '10px', fontSize: '16px'}}>IP : {ip}</span>
+	
+
+						</div>
+					</div>
+					{/* <span className="td-pg-profile__quick__info--referral" style={{fontSize: '16px', marginRight: '10px'}}>
+								<ReferralProgram />
+							</span> */}
 				</div>
 			</div>
 	);

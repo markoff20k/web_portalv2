@@ -115,9 +115,9 @@ export const pt = {
 	'page.body.wallets.tabs.deposit.ccy.message.pending': 'Gerando endereço de depósito',
 
 
-	'page.body.wallets.tabs.deposit.fiat.message1': 'Depósito por PIX',
+	'page.body.wallets.tabs.deposit.fiat.message1': 'Os depósitos na sua carteira BRL devem ser feitos por PIX.',
 	'page.body.wallets.tabs.deposit.fiat.message2':
-		'Certifique-se de que o nome e o número de CPF na sua conta bancária corresponde com o nome legal associado à sua conta Fortem. Seu depósito será creditado em sua carteira Fortem em até 1 hora.',
+		'Certifique-se de que o nome e o número de CPF da sua conta bancária corresponde com o nome civil associado à sua conta Fortem. Seu depósito será creditado na sua carteira Fortem em até 1 hora.',
 	'page.body.wallets.tabs.deposit.fiat.bankName': 'CNPJ',
 	'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Nome do titular da conta',
 	'page.body.wallets.tabs.deposit.fiat.accountName': 'Código do banco',

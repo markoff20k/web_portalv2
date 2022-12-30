@@ -271,14 +271,14 @@ export const WithdrawAddress: React.FC<WithdrawAddressProps> = (props: WithdrawA
 		<div id="withdraw-address">
 			<div
 				className="container d-flex flex-column justify-content-between"
-				style={{ backgroundColor: '#2D2E3D', padding: '30px', borderRadius: '5px', height: '100%', fontSize: '1.3rem' }}
+				style={{ backgroundColor: 'transparent', padding: '30px', borderRadius: '5px', height: '100%', fontSize: '1.3rem' }}
 			>
 				<div>
-					<div className="row">
+					{/* <div className="row">
 						<div className="col-12">
 							<span>Blockchain: </span>
 						</div>
-					</div>
+					</div> */}
 					<div className="row">
 						<div className="col-12">
 							{

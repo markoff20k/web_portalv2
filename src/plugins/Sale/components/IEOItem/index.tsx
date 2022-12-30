@@ -187,24 +187,24 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						<ul className="list-style-03">
 
 							<div className="font-weight-500 text-extra-dark-gray " style={{marginTop: '-10px', fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Preço unitário</span><span>R$ {props.sale.price}</span>
+								<span>Preço unitário:</span><span>R$ {props.sale.price}</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Rendimento ao mês</span><span style={{color: '#13b887'}}>{props.sale.host_uid}</span>
+								<span>Rendimento ao mês:</span><span style={{color: '#13b887'}}>{props.sale.host_uid}</span>
 							</div>
 							<Separator />
 							<div className="font-weight-500 text-extra-dark-gray mt--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Investimento mínimo</span><span style={{}}>R$ 100,00</span>
+								<span>Investimento mínimo:</span><span style={{}}>R$ 100,00</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray " style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Carência</span><span style={{}}>90 dias</span>
+								<span>Carência:</span><span style={{}}>90 dias</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Pagamento de juros</span><span style={{}}>Mensal</span>
+								<span>Pagamento de juros:</span><span style={{}}>Mensal</span>
 							</div>
 							<Separator />
 							<div className="font-weight-500 text-dark-gray mt--10" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Valor captado</span><span>Total ofertado</span>
+								<span>Valor captado:</span><span>Total ofertado:</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mb--10" style={{ display: 'flex', justifyContent: 'space-between'}}>
 								<span>R$ <Decimal fixed={0} thousSep="." floatSep=",">{((props.sale.total_ieo - props.sale.remains) * props.sale.price)}</Decimal></span><span style={{}}>R$ <Decimal fixed={0} thousSep="." floatSep=",">{(props.sale.total_ieo * props.sale.price)}</Decimal></span>
@@ -255,7 +255,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 						<ul className="list-style-03">
 
 							<div className="font-weight-500 text-extra-dark-gray mt--5 mb--5" style={{fontSize: '15px', display: 'flex', }}>
-								<span>Descrição</span>
+								<span>Descrição:</span>
 							</div>
 							<div className="inner-container font-weight-500 text-extra-dark-gray mb--15" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', height: '80px'}}>
 								<span className="display-5 mg-bottom-0" style={{fontSize: '14px', display: 'flex', justifyContent: 'flex-start', textAlign: 'left', maxHeight: '80px'}}>{props.sale.description}</span>
@@ -272,7 +272,7 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							</div>
 							<Separator />
 							<div className="font-weight-500 text-extra-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Formas de pagamento</span>
+								<span>Formas de pagamento:</span>
 							</div>
 							<div className="font-weight-500 text-extra-dark-gray mt--5" style={{fontSize: '14px', display: 'flex', justifyContent: 'space-between'}}>
 								<span>Reais (R$)</span><span style={{}}><img style={{ width: '26px', height: '26px', marginLeft: '1rem', }} src="https://fortem.fra1.digitaloceanspaces.com/BRL%20%281%29.svg"/></span>
@@ -288,14 +288,14 @@ export const IEOItem: React.FC<SaleItemProps> = (props: SaleItemProps) => {
 							</div>
 							<Separator />
 							<div className="font-weight-500 text-dark-gray mt--15" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Total de tokens ofertados</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.total_ieo}</Decimal></span>
+								<span>Total de tokens ofertados:</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.total_ieo}</Decimal></span>
 								
 							</div>
 							<div className="font-weight-500 text-dark-gray " style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-							<span>Total de tokens disponíveis</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.remains}</Decimal></span> 
+							<span>Total de tokens disponíveis:</span><span style={{}}><Decimal fixed={0} thousSep="." floatSep=",">{props.sale.remains}</Decimal></span> 
 							</div>
 							<div className="font-weight-500 text-dark-gray" style={{fontSize: '15px', display: 'flex', justifyContent: 'space-between'}}>
-								<span>Progresso</span><span style={{}}>{Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}%</span>
+								<span>Progresso:</span><span style={{}}>{Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}%</span>
 							</div>
 							{/*<Progress
 								strokeColor={{

@@ -9,13 +9,13 @@ import {
 } from '../actions';
 
 const marketPriceRequestOptions: RequestOptions = {
-    apiVersion: 'ieo',
+    apiVersion: 'core',
 };
 
 export function* marketPriceSaga(action: MarketPriceFetch) {
     try {
         const payload = action.payload ? `?${buildQueryString(action.payload)}` : '';
-        const price = yield call(API.get(marketPriceRequestOptions), `/public/markets/ftkusd/tickers`);
+        const price = yield call(API.get(marketPriceRequestOptions), `/public/markets/ethusd/tickers`);
         console.log(price.ticker.last);
         yield put(marketPriceData({ 'price': price.ticker.last, 'created_at': '', 'updated_at': ''}));
         

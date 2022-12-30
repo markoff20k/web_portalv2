@@ -1408,12 +1408,12 @@ flex-direction: row !important;
     
 
   }.pg-wallet .cr-withdraw { /*form de saque*/
-    color: var(--table-text-color);
+    color: #C0C0C0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: calc(var(--gap) * 5) calc(var(--gap) * 3) calc(var(--gap) * 3);
-    background: none !important;
+    /* padding: calc(var(--gap) * 5) calc(var(--gap) * 3) calc(var(--gap) * 3); */
+    background: transparent !important;
 
   }.pg-wallet .cr-withdraw-column {
       display: flex;
@@ -1685,12 +1685,12 @@ flex-direction: row !important;
     }.pg-wallet .cr-wallet-item__balance-amount {
           font-size: 17px !important;
       font-weight: bold !important;
-      color: white !important;
+      color: #F5F5F5 !important;
 
     }.pg-wallet .cr-wallet-item__balance-locked {
       font-size: 16px !important;
        font-weight: bold !important;
-       color: white !important;
+       color: #F5F5F5 !important;
 
 }.pg-wallet .cr-wallet-item--active {
       background: transparent !important;
@@ -2294,14 +2294,15 @@ flex-direction: row !important;
 			color: var(--primary-text-color);
 			font-size: calc(var(--gap) * 8);
 		}.cr-wallet-item__single .cr-wallet-item__amount-locked {
-			margin-right: calc(var(--gap) * 8);
+			margin-right: calc(var(--gap) * 2);
 		}.cr-wallet-item__single .cr-wallet-item__balance,
 		.cr-wallet-item__single .cr-wallet-item__amount-locked {
 			background: transparent;
-			color: var(--table-text-color);
+			color: #C0C0C0;
 			display: flex;
 			font-size: calc(var(--gap) * 3);
 			line-height: 1;
+            margin-left: 0px !important;
 			margin-bottom: calc(var(--gap) * 0.6);
 			padding-top: 0;
 		}.cr-wallet-item__single .cr-wallet-item__balance-amount,
@@ -2334,18 +2335,18 @@ flex-direction: row !important;
 }.item3 {
 	align-self: center;
 	background: transparent;
-	color: wheat;
+	color: #FDA736 !important;
 	font-size: 1.8em;
 	font-weight: 600;
 	grid-area: balance_amount;
-	text-align: right;
+	text-align: right !important;
 }.item4 {
 	align-self: center;
 	background: transparent;
 	color: var(--table-text-color);
 	font-size: 1.4em;
 	grid-area: lock_amount;
-	text-align: right;
+	text-align: right !important;
 }.info-grid {
 	display: grid;
 	grid-gap: 10px;

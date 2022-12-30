@@ -1,3 +1,4 @@
+
 import { Button, Input, InputNumber, message, notification, Tooltip, Select } from 'antd';
 import NP from 'number-precision';
 import React, { useState } from "react";
@@ -332,15 +333,15 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			return (
 				<React.Fragment>
 					<div className="" >
-						<span style={{ fontSize: '14px', color: 'white', background: '#1f1f1f', marginTop: '10px' }}>Quantidade:</span>
-						<Tooltip title={'Digite a quantidade de tokens'}  placement="topLeft" color='#009991' >
+						<span style={{ fontSize: '14px', color: '#f5f5f5', background: 'transparent', marginTop: '10px' }}>Quantidade:</span>
+						<Tooltip title={'Digite a quantidade de tokens que deseja comprar'}  placement="topLeft" color='#009991' >
 
 						<Input
-							size="large"
+							size="small"
 							autoFocus={type === 'ongoing'}
 							value={quantityInputState}
-							type=' number'
-							
+							type='number'
+							placeholder='Quantidade de tokens'
 							disabled={quoteBalanceState <= 0}
 							onChange={handleQuantityInput}
 			
@@ -357,7 +358,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 						<span style={{ fontSize: '14px', color: '#f5f5f5',
 						 background: 'transparent' }}>Ao preço unitário de:</span>
 						<Input
-							size="large"
+							size="small"
 							disabled
 							value={priceState}
 							type="number"
@@ -445,7 +446,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 	return (
 		<React.Fragment>
 			<div id="sale-buy" >
-				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: '#EEB73F'}}>{currency_id.toUpperCase()}</span></h2>
+				<h2 className="sale-buy__title" style={{color: '#fff'}}>Comprar <span style={{color: '#FDA736'}}>{currency_id.toUpperCase()}</span></h2>
 				<h3 className="sale-buy__subtitle">{`Saldo atual: ${baseBalance} ${currency_id.toUpperCase()}`}</h3>
 				<div className="buy-box" >
 					{showSelectCurrencyForm()}
