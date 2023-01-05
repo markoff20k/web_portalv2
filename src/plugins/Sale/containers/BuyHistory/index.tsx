@@ -117,7 +117,7 @@ export const BuyHistory: React.FC<BuyHistoryProps> = (props: BuyHistoryProps) =>
 		<React.Fragment>
 			<p className="text-center">Histórico das minhas transações</p>
 			<Table
-				
+				size='large'
 				pagination={tableState.pagination}
 				dataSource={tableState.data}
 				loading={tableState.loading}

@@ -121,7 +121,7 @@ export const DepositHistory: React.FC<DepositHistoryProps> = (props: DepositHist
 
 	return (
 		<div style={{ marginTop: '10px' }}>
-			<h2>{intl.formatMessage({ id: `page.body.history.deposit` })}</h2>
+			<p>{intl.formatMessage({ id: `page.body.history.deposit` })}</p>
 			<ReactTable columns={columns} data={data} headColor="transparent" />
 		</div>
 	);

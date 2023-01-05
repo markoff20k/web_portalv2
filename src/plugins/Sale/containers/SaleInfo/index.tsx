@@ -3,7 +3,7 @@ import { ProgressLinear } from 'ui-neumorphism';
 import 'ui-neumorphism/dist/index.css';
 
 import Countdown from 'react-countdown';
-import './SaleInfo.css';
+//import './SaleInfo.css';
 
 import { Col, Row, Statistic } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
@@ -93,17 +93,24 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 	
 	const elapsedTime =  Number(Date.now()) - Number((new Date(props.sale.start_date)).getTime);
 	const totalTime =   Number((new Date(props.sale.end_date)).getTime) - Number((new Date(props.sale.start_date)).getTime);
+	// const percentage = (elapsedTime/totalTime)*100; `
 	const percentage = 82; 
 
 	switch (props.sale.type) {
 		case 'upcoming':
-			countdownTitle = <p style={{color: '#f5f5f5', fontSize: '18px'}} >Data de início do ciclo: {localeDate(props.sale.start_date, 'fullDate', 'pt-BR')}</p>;
+			countdownTitle = <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}> 
+								<p style={{color: '#f5f5f5', fontSize: '1'}} >Data de início do ciclo: </p> <p>{localeDate(props.sale.start_date, 'fullDate', 'pt-BR')}</p>;
+							</div>
 			break;
 		case 'ongoing':
-			countdownTitle = <p style={{color: '#f5f5f5', fontSize: '18px'}} >Data final do ciclo: <span style={{color: '#009991', fontSize: '18px'}}> {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</span></p> 
+			countdownTitle = 	<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}> 
+									<p style={{color: '#f5f5f5', fontSize: '1'}} >Data final do ciclo: </p> <p style={{color: '#009991', fontSize: '1'}}>   {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</p>
+				  				</div>
 			break;
 		default:
-			countdownTitle = <p style={{color: '#f5f5f5', fontSize: '18px'}} > Captação concluída em: {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</p>;
+			countdownTitle = <div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}> 
+								<p style={{color: '#f5f5f5', fontSize: '1'}} > Captação concluída em: {localeDate(props.sale.end_date, 'fullDate', 'pt-BR')}</p>;
+							</div>
 			break;
 	}
 
@@ -120,54 +127,56 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 			</div>
 			<div className="row">
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'column', marginTop: '30px' }}>
-					<p className="title" style={{textDecoration: 'underline', fontSize: '18px', fontWeight: 500, color: '#f5f5f5'}}>Descrição do projeto:</p>
+					<p className="title" style={{textDecoration: 'underline', fontSize: '1', fontWeight: 500, color: '#f5f5f5'}}>Descrição do projeto:</p>
 					<p className="sale-info-description">{props.sale.description}</p>
 					
 					
 				</div>
-				<div className="row">
-				<div className="col-16">
-					<span className="text-center" style={{color: '#f5f5f5', fontSize: '18px'}}>Ciclo atual de captação: </span> <span style={{color: '#009991', fontSize: '18px'}}> {props.sale.id}</span>
+				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Ciclo atual de captação: </p> <p style={{color: '#009991', fontSize: '1'}}> {props.sale.id}</p>
 
-				</div>
 				</div>
 			</div>
 		<div className="row">
-			<p style={{color: '#009991', fontSize: '18px'}}>{countdownTitle}</p>
-		</div>
-		<div className="row d-flex justify-content-between">
-			<p style={{marginLeft: '50px'}}><Countdown date={countdownTime} renderer={renderer} /></p>
-			<div style={{ width: '120px', height: '120px'}} >
-			<CircularProgressbar
-        		value={percentage}
-        		text={`${percentage}%`}
-        		background
-        		backgroundPadding={6}
-        		styles={buildStyles({
-          		backgroundColor: "#009991",
-          		textColor: "#f5f5f5",
-          		pathColor: "#f5f5f5",
-          		trailColor: "#acacac"
-        		})}
-      />
-			
-			
+			<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+				{countdownTitle}
 			</div>
 		</div>
+		<div className="row">
+			<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+				<Countdown date={countdownTime} renderer={renderer} />
+				<p style={{ width: '100px', height: '100px'}} >
+				<CircularProgressbar
+        			value={percentage}
+        			text={`${percentage}%`}
+        			background
+        			backgroundPadding={6}
+        			styles={buildStyles({
+          			backgroundColor: "#009991",	
+          			textColor: "#f5f5f5",
+          			pathColor: "#f5f5f5",
+          			trailColor: "#acacac"
+        			})}
+      			/>
+				</p>
+			</div>
+			
+			
+		</div>
 			<hr />
-			<div className="row text-center">
+			<div className="row">
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-					<p style={{color: '#f5f5f5', fontSize: '18px'}}>Rendimento:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.host_uid}</span>
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Rendimento:</p><span style={{color: '#009991', fontSize: '1'}}>{props.sale.host_uid}</span>
 				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-					<p style={{color: '#f5f5f5', fontSize: '18px'}}>Preço unitário:</p><span style={{color: '#009991', fontSize: '18px'}}>{`R$ ${props.sale.price} `}</span>
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Preço unitário:</p><span style={{color: '#009991', fontSize: '1'}}>{`R$ ${props.sale.price} `}</span>
 				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-					<p style={{color: '#f5f5f5', fontSize: '18px'}}>Lote mínimo:</p><span style={{color: '#009991', fontSize: '18px'}}>{`${props.sale.min_buy} ${ 'tokens ' }${props.sale.currency_id.toUpperCase()}`}</span>
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Lote mínimo:</p><span style={{color: '#009991', fontSize: '1'}}>{`${props.sale.min_buy} ${ 'tokens ' }${props.sale.currency_id.toUpperCase()}`}</span>
 				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-					<p style={{color: '#f5f5f5', fontSize: '18px'}}>Total de tokens emitidos:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.total_ieo}</span><br />
-					<p style={{color: '#f5f5f5', fontSize: '18px'}}>Total de tokens restantes:</p><span style={{color: '#009991', fontSize: '18px'}}>{props.sale.remains}</span><br/>
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Total de tokens emitidos:</p><span style={{color: '#009991', fontSize: '1', marginRight: '1em'}}>{props.sale.total_ieo}</span><br />
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Total de tokens restantes:</p><span style={{color: '#009991', fontSize: '1', marginRight: '1em'}}>{props.sale.remains}</span><br/>
 
 				</div>
 				<div >
@@ -178,7 +187,7 @@ export const SaleInfo: React.FC<SaleInfoProps> = (props: SaleInfoProps) => {
 						value={Math.floor(((props.sale.total_ieo - props.sale.remains) / props.sale.total_ieo) * 100)}
 					 />				</div>
 				<div className="col-12" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '20px' }}>
-					<p style={{color: '#f5f5f5', fontSize: '18px'}}>Total de compradores:</p><span style={{color: '#009991', fontSize: '18px'}}>{totalBuyersSelector.payload.totalBuyers}</span>
+					<p style={{color: '#f5f5f5', fontSize: '1'}}>Total de compradores:</p><span style={{color: '#009991', fontSize: '18px'}}>{totalBuyersSelector.payload.totalBuyers}</span>
 				</div>
 			</div>
 			<hr />

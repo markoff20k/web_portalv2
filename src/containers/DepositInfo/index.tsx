@@ -122,7 +122,7 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 			value: currency.id,
 			label: (
 				<span>
-					<img style={{ width: '2rem' }} src={findIcon(currency.id)} alt={currency.id} /> {currency.id.toUpperCase()} |{' '}
+					<img style={{ width: 'rem' }} src={findIcon(currency.id)} alt={currency.id} /> {currency.id.toUpperCase()} |{' '}
 					{currency.name.toUpperCase()}
 				</span>
 			),
@@ -214,14 +214,14 @@ export const DepositInfo: React.FC<DepositInfoProps> = (props: DepositInfoProps)
 						</div>
 					</div>
 				</div>
-				<div className="row mt-5">
+				{/* <div className="row mt-5">
 					<div className="col-12">
 						<h5>Negociar:</h5>
 					</div>
 					<div className="col-12">
 						<TradeList currency_id={currency_id} />
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

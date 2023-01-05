@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { useState }  from 'react';
 import { injectIntl } from 'react-intl';
 import { connect, MapDispatchToPropsFunction } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { IntlProps } from '../../../';
-import { formatWithSeparators, WalletItem } from '../../../components';
+import { formatWithSeparators, WalletItem, SummaryField } from '../../../components';
 import { VALUATION_PRIMARY_CURRENCY, VALUATION_SECONDARY_CURRENCY } from '../../../constants';
 import { Charts } from '../../../containers';
 import { estimateUnitValue, estimateValue } from '../../../helpers/estimateValue';
@@ -39,6 +39,12 @@ import RubberBand from 'react-reveal/RubberBand';
 
 import Slider from 'react-slick';
 
+// import { TabPanel } from '../../../../../components';
+
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+
+import component from 'template_react_status/src/components/components/component';
+import { Link } from 'react-router-dom';
 
 interface EstimatedValueProps {
     wallets: Wallet[];
@@ -62,6 +68,10 @@ interface DispatchProps {
 type Props = DispatchProps & ReduxProps & EstimatedValueProps & IntlProps;
 
 class EstimatedValueContainer extends React.Component<Props> {
+
+
+  
+  
     public componentDidMount(): void {
         const {
             currencies,
@@ -71,6 +81,8 @@ class EstimatedValueContainer extends React.Component<Props> {
             markets,
             tickers,
         } = this.props;
+
+        
 
         if (!markets.length) {
             fetchMarkets();
@@ -83,6 +95,8 @@ class EstimatedValueContainer extends React.Component<Props> {
         if (!currencies.length) {
             fetchCurrencies();
         }
+
+        
     }
 
     public componentWillReceiveProps(next: Props) {
@@ -94,6 +108,9 @@ class EstimatedValueContainer extends React.Component<Props> {
             markets,
             tickers,
         } = this.props;
+
+
+        
 
         if (!markets.length && next.markets.length) {
             fetchMarkets();
@@ -123,11 +140,22 @@ class EstimatedValueContainer extends React.Component<Props> {
             
         }));
 
-        var sortedWallet = formattedWallet.sort((a,b) => 
+        let  sortedWallet = formattedWallet.sort((a,b) => 
 
             b.value - a.value
 
         );
+
+        
+  	const fiatWallet = wallets.filter(wallet => wallet.type.toLowerCase() === 'fiat');
+    const tokenWallet = wallets.filter(wallet => wallet.type === 'coin' && wallet.currency.toUpperCase() === 'FTK');
+    const cryptoWallet = wallets.filter(wallet => wallet.type === 'coin' && wallet.currency.toUpperCase() != 'FTK' );
+
+    
+    
+    
+
+
         const pieChartOptionsCharts = {
             style: {background: 'rgba(255,255,255,0.2)', filter: 'blur(1px)'},
             labels: [sortedWallet[0].name, sortedWallet[1].name, sortedWallet[2].name],
@@ -266,37 +294,118 @@ class EstimatedValueContainer extends React.Component<Props> {
                 opacityTo: 0,
                 stops: [],
               },
-              colors: ["#fff", "#1EDED0"],
+              colors: ["#f5f5f5", "#1EDED0"],
             },
-            colors: ["#fff", "#1EDED0"],
+            colors: ["#f5f5f5", "#1EDED0"],
           };
           
         const estimatedValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, wallets, markets, tickers);
+        const estimatedFiatValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, fiatWallet, markets, tickers);
+        const estimatedTokenValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, tokenWallet, markets, tickers);
+        const estimatedCryptoValue = estimateValue(VALUATION_PRIMARY_CURRENCY, currencies, cryptoWallet, markets, tickers);
+
+        const renderTabs = (
+          <span className="position-absolute pg-estimated-value__container-charts" style={{ marginTop: '-200px', marginLeft: '0px'}} >
+          <span style={{color: '#F5F5F5', marginTop: '20px'}} > Composição da carteira </span>
+        
+              {/* <PieChart
+              chartData={[tokenWallet[0].balance, tokenWallet[1].balance]}
+              chartOptions={pieChartOptionsCharts}
+          /> */}
+
+          <PieChart
+              chartData={[tokenWallet[0].balance]}
+              chartOptions={pieChartOptionsCharts}
+          />
+
+          </span>
+        );
 
 
         return (
             <div className="pg-estimated-value-wallet bg_image w-container" >
                 <img src={mainBanner} style={{filter: 'blur(3px)', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '400px'}}/>
                 <div className="pg-estimated-value__container position-absolute" >
-                    <span className="value-container">
-                        <span style={{color: '#F5F5F5'}}>{this.translate('page.body.wallets.estimated_value')} </span>
-                        <span className="value"> {formatWithSeparators(estimatedValue, '.')} </span>
-                        <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
-                    </span>
+                    <div className="value-container">
+                        <div >
+                        <details>
+                        <summary>
+                          <span style={{color: '#F5F5F5'}}>{this.translate('page.body.wallets.estimated_value')} </span>
+                          <span className="value"> {formatWithSeparators(estimatedValue, '.')} </span>
+                          <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
+                        </summary>
+                        <p> 
+                           
+                          <span style={{color: '#F5F5F5'}} > Composição da carteira </span>
+            
+                            <PieChart
+                              chartData={[sortedWallet[0].value, sortedWallet[1].value]}
+                              chartOptions={pieChartOptionsCharts}
+                            />
+
+                            
+                        </p>
+                          </details>
+                        </div>
+        
+                        <div>
+                          <span style={{color: '#F5F5F5'}}> Disponível na conta digital (fiat): </span>
+                          <span className="value"> {formatWithSeparators(estimatedFiatValue, '.')} </span>
+                          <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
+                        </div>
+
+                        <div>
+                          <SummaryField  className="value-container-false" message='Gráfico' content={<p><PieChart
+                                chartData={[tokenWallet[0].balance]}
+                                chartOptions={pieChartOptionsCharts}
+                              /></p>} /> 
+
+                          <span style={{color: '#F5F5F5'}}> Disponível na conta digital (cripto): </span>
+                          <span className="value"> {formatWithSeparators(estimatedCryptoValue, '.')} </span>
+                          <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
+                        </div>
+
+                        <div>
+                        <details>
+                        <summary>
+                          <span style={{color: '#F5F5F5'}}> Investido em tokens: </span>
+                          <span className="value"> {formatWithSeparators(estimatedTokenValue, '.')} </span>
+                          <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
+
+                        </summary>
+                            <p className="value-container2"> 
+                              <PieChart
+                                chartData={[tokenWallet[0].balance]}
+                                chartOptions={pieChartOptionsCharts}
+                              /></p>
+                          </details>
+                          
+                          {/* {<Link onClick={renderTabs} />} */}
+                          
+                          
+                          
+                  
+                        </div>
+                    </div>             
+                    
+
+                    {/* <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+
+                    </Tabs> */}
+
+
+
+                                {/* <TabPanel
+                panels={renderTabs()}
+                currentTabIndex={currentTabIndex}
+                onCurrentTabChange={setCurrentTabIndex}
+            />        */}
                     {/*{VALUATION_SECONDARY_CURRENCY && this.renderSecondaryCurrencyValuation(estimatedValue)}*/}
                
                 {/*{[sortedWallet[0].value, sortedWallet[1].value]}*/}
-                <span className="position-absolute pg-estimated-value__container-charts" style={{ marginTop: '80px', marginLeft: '-320px'}} >
-                <span style={{color: '#F5F5F5', marginTop: '20px'}} > Composição da carteira </span>
-            
-                <PieChart
-                    chartData={[sortedWallet[0].value, sortedWallet[1].value]}
-                    chartOptions={pieChartOptionsCharts}
-                />
-            
-                </span>
 
-                <span className="position-absolute pg-estimated-value__container-charts" style={{marginTop: '80px', marginLeft: '30px'}} >
+
+                <span className="position-absolute pg-estimated-value__container-charts" style={{marginTop: '-160px', marginLeft: '460px'}} >
                 <span style={{color: '#F5F5F5', }}> Evolução patrimonial </span>
                 <LineChart
                     chartData={lineChartDataCharts}
@@ -315,6 +424,8 @@ class EstimatedValueContainer extends React.Component<Props> {
             </div>
             
         );
+
+
     }
 
     public translate = (key: string) => this.props.intl.formatMessage({id: key});
@@ -379,11 +490,18 @@ class EstimatedValueContainer extends React.Component<Props> {
                 <span className="value">
                     {formatWithSeparators(estimatedValueSecondary, ',')}
                 </span>
-                <span className="value-sign">{VALUATION_SECONDARY_CURRENCY.toUpperCase()}</span>
+                <span className="value-sign">{VALUATION_SECONDARY_CURRENCY.toUpperCase()} </span>
             </span>
         );
     };
 }
+
+
+
+
+
+
+
 
 const mapStateToProps = (state: RootState): ReduxProps => ({
     currencies: selectCurrencies(state),

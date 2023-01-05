@@ -14,7 +14,7 @@ export const CautionsDetail = (props: { ieoID: number }) => {
 		return (
 			<div className="loading d-flex -justify-content-center w-100">
 				<div className="spinner-border text-primary m-auto" role="status">
-					<span className="sr-only">Loading...</span>
+					<span className="sr-only">Carregando informações...</span>
 				</div>
 			</div>
 		);
@@ -23,7 +23,7 @@ export const CautionsDetail = (props: { ieoID: number }) => {
 	return (
 		<div id="cautions-detail">
 			<div className="cautions-detail-title">
-				<h3>CAUTIONS</h3>
+				<h3>Precauções</h3>
 			</div>
 			{caution.loading ? (
 				loadingSpinner()

@@ -33,7 +33,7 @@ export const HistoryScreen = () => {
 	const [listData, setListData] = useState(list);
 
 	useEffect(() => {
-		setDocumentTitle('History');
+		setDocumentTitle('Extratos');
 		dispatch(historyAllFetch({ page: 1, type: tab, limit: 25 }));
 		if (currencies.length === 0) {
 			dispatch(currenciesFetch());

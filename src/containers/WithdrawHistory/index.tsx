@@ -128,16 +128,16 @@ export const WithdrawHistory: React.FC<WithdrawHistoryProps> = (props: WithdrawH
 			<h2>{intl.formatMessage({ id: `page.body.history.withdraw` })}</h2>
 			<div className="react-tabs">
 				<Tabs defaultActiveKey="recent_history">
-					<TabPane tab="Recent" key="recent_history">
+					<TabPane tab="Últimos" key="recent_history">
 						<ReactTable columns={columns} data={all_history} headColor="#182034" />
 					</TabPane>
-					<TabPane tab="Confirming" key="confirming_history">
+					<TabPane tab="Em confirmação" key="confirming_history">
 						<ReactTable columns={columns} data={confirming_history} headColor="#182034" />
 					</TabPane>
-					<TabPane tab="Success" key="success_history">
+					<TabPane tab="Processado" key="success_history">
 						<ReactTable columns={columns} data={success_history} headColor="#182034" />
 					</TabPane>
-					<TabPane tab="Error" key="error_history">
+					<TabPane tab="Erro" key="error_history">
 						<ReactTable columns={columns} data={error_history} headColor="#182034" />
 					</TabPane>
 				</Tabs>

@@ -161,10 +161,10 @@ flex-direction: row !important;
 
 
 .form-control:focus {
-    color: #464a4c !important;
-    boder: 1px solid #c0c0c0 !important;
+    color: #c0c0c0 !important;
+    boder: 1px solid #888888  !important;
     border-radius: 5px !important;
-    boder-color: #c0c0c0 !important;
+    boder-color: #888888 !important;
 
     outline: none !important;
   }
@@ -172,7 +172,7 @@ flex-direction: row !important;
 
   .form-control-lg:focus {
     color: #181819 !important;
-    boder: 1px solid #c0c0c0 !important;
+    boder: 1px solid #888888 !important;
 
     border-radius: 5px !important;
     outline: none !important;
@@ -183,8 +183,8 @@ flex-direction: row !important;
     color: #181819 !important;
     
     
-    boder: 1px solid #c0c0c0 !important;
-    boder-color: #c0c0c0 !important;
+    boder: 1px solid #888888 !important;
+    boder-color: #888888 !important;
     border-radius: 5px !important;
     width: 100% !important;
     
@@ -204,8 +204,8 @@ flex-direction: row !important;
     color: #181819 !important;
     line-height: 25px;
     font-size: 16px !important;
-    boder: 1px solid #c0c0c0 !important;
-    boder-color: #c0c0c0 !important;
+    boder: 1px solid #888888  !important;
+    boder-color: #888888  !important;
     border-radius: 5px !important;
     width: 100% !important;
 }
@@ -214,8 +214,8 @@ flex-direction: row !important;
     color: #181819 !important;
     line-height: 25px;
     font-size: 15px;
-    boder: 1px solid #c0c0c0 !important;
-    boder-color: #c0c0c0 !important;
+    boder: 1px solid #888888 !important;
+    boder-color: #888888 !important;
     border-radius: 5px !important;
     background-color: #dde1e7 !important;
     
@@ -229,7 +229,7 @@ flex-direction: row !important;
     color: #181819 !important;
     line-height: 25px;
     font-size: 15px;
-    boder: 1px solid #c0c0c0 !important;
+    boder: 1px solid #888888 !important;
     border-radius: 5px !important;
 
 }
@@ -251,8 +251,8 @@ flex-direction: row !important;
 .form-control-lg--focused {
     color: #181819 !important;
     line-height: 25px;
-    font-size: 17px !important;
-    boder: 1px solid #c0c0c0 !important;
+    font-size: 1 !important;
+    boder: 1px solid #888888  !important;
     border-radius: 5px !important;
     
 
@@ -261,8 +261,8 @@ flex-direction: row !important;
 .form-control--focused {
     color: #181819 !important;
     line-height: 25px;
-    font-size: 17px !important;
-    boder: 1px solid #c0c0c0 !important;
+    font-size: 1 !important;
+    boder: 1px solid #888888 !important;
     border-radius: 5px !important;
 
 }
@@ -271,8 +271,8 @@ flex-direction: row !important;
 .form-control-lg--selected {
     color: #181819 !important;
     line-height: 25px;
-    font-size: 17px !important;
-    boder: 1px solid #c0c0c0 !important;
+    font-size: 1 !important;
+    boder: 1px solid #888888 !important;
     border-radius: 5px !important;
     
 
@@ -283,7 +283,7 @@ flex-direction: row !important;
     color: #181819 !important;
     line-height: 25px;
     font-size: 17px !important;
-    boder: 1px solid #c0c0c0 !important;
+    boder: 1px solid #888888 !important;
     border-radius: 5px !important;
     
 
@@ -307,7 +307,7 @@ flex-direction: row !important;
 			color: #F5F5F5;
 			cursor: pointer;
 			display: block;
-			font-size: 15px;
+			font-size: 1;
 			line-height: 18px;
 			margin: 10px 10px 10px 5px;
 			min-height: 30px;
@@ -983,20 +983,6 @@ flex-direction: row !important;
 }
 
 
-#sale-info,
-#sale-social,
-#sale-history {
-	background-color: #1f1f1f !important;
-	padding: 20px !important;
-	width: 620px !important;
-	height: 1024px !important;
-	border: 2px solid #009991;
-	border-radius: 6px;
-	margin-right: 10px !important;
-
-}
-
-
 
 
 .sale-detail__badge {
@@ -1123,13 +1109,13 @@ flex-direction: row !important;
     display: flex !important;
   
     //background: #1f1f1f;
-    background-color: #181819;
+    background-color: transparent;
     opacity: 0.85;
 	border-radius: 10px;
     border: 1px solid var(--wallets-item-border-color);	
 	//padding-left: 38px;
     //max-width: 1200px;
-    font-size: 15px;
+    font-size: 1rem;
     //padding: 20px !important;
     max-width: 1170px !important; 
         
@@ -1139,7 +1125,7 @@ flex-direction: row !important;
 }.pg-estimated-value__container {
 		font-size: 15px;
 		padding: 30px !important;
-		width: 1200px;
+		
         
         //margin: 20px ;
         font-weight: 600;
@@ -1168,6 +1154,7 @@ flex-direction: row !important;
                     border-radius: 10px;
                     color: var(--yellow);
                     font-weight: 600;
+                    width: 100%;
 		}    
         
         
@@ -1259,10 +1246,9 @@ flex-direction: row !important;
     margin-bottom: 0 !important;
     margin-top: 3px !important;
     
-    
-
     height: 100% !important;
-    width: 100% !important;
+    width: 30vw !important;
+
   }.pg-wallet .cr-wallet-list li {
       padding-top: 0 !important;
       padding-bottom: 0 !important;
@@ -2531,22 +2517,22 @@ flex-direction: row !important;
 				}
 }{/*//depositFiat*/}.cr-deposit-fiat {
 	padding: calc(var(--gap) * 3) calc(var(--gap) * 3);
-    margin-top: 30px !important;
+    
 }.cr-deposit-fiat__title {
-		font-size: 16px !important;
-		margin-bottom: calc(var(--gap) * 3);
+	
+	
 	}.cr-deposit-fiat__description {
 		margin-bottom: calc(var(--gap) * 3);
-        font-size: 15px !important;
+    
 	}.cr-deposit-fiat-credentials {
 		position: relative;
         font-size: 15px !important;
 		width: 100%;
-        margin-bottom: calc(var(--gap) * 3);
+    
 	}.cr-deposit-fiat-detail {
 		display: flex !important;
         justify-content: space-between !important;
-        font-size: 15px !important;
+    
 	}.cr-deposit-fiat-detail__label,
 		.cr-deposit-fiat-detail__value {
 			font-size: 15px !important;
@@ -3096,7 +3082,7 @@ flex-direction: row !important;
 		outline: 1px solid var(--base-3);
 	}.cr-modal__container-header {
 			color: #c0c0c0;
-			font-size: var(--font-size-bigger);
+			font-size: 1.1;
 			margin-bottom: calc(var(--gap) * 3);
 			outline: 1px solid var(--base-3);
 			padding: calc(var(--gap) * 3);
@@ -4971,10 +4957,10 @@ margin-left: 20px;
 					float: right;
 					height: 36px;
 					outline: none;
-					width: 8rem;
+					width: 8em;
 				}.fortem-mainPage .market .container .home-market .home-market__trading-btn:hover {
 						color: #1EDED0;
-						opacity: 0.5;
+						opacity: 0.61;
 						transition: 0.4s;
 					}.fortem-mainPage .market .container .home-market .btn-mainPage-AllMarkets {
 

@@ -5766,9 +5766,9 @@ html {
   padding: 4px 15px;
   font-size: 14px;
   border-radius: 2px;
-  color: rgba(255, 255, 255, 0.85);
-  background: transparent;
-  border-color: #434343;
+  color: #c0c0c0 !important;
+  background: transparent !important;
+  border-color: #009991 !important;
 }
 .ant-btn > .anticon {
   line-height: 1;
@@ -5818,9 +5818,9 @@ html {
 }
 .ant-btn:hover,
 .ant-btn:focus {
-  color: #165996;
+  color: #009991 !important;
   background: transparent;
-  border-color: #165996;
+  border-color:  #009991 !important;
 }
 .ant-btn:hover > a:only-child,
 .ant-btn:focus > a:only-child {
@@ -5837,9 +5837,9 @@ html {
   content: '';
 }
 .ant-btn:active {
-  color: #388ed3;
+  color: #18988F;
   background: transparent;
-  border-color: #388ed3;
+  border-color: #18988F;
 }
 .ant-btn:active > a:only-child {
   color: currentColor;
@@ -5892,15 +5892,15 @@ html {
   display: inline-block;
 }
 .ant-btn-primary {
-  color: #fff;
-  background: #177ddc;
-  border-color: #177ddc;
+  color: #f5f5f5 !important;
+  background: #009991 !important;
+  border-color: #009991 !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
 .ant-btn-primary > a:only-child {
-  color: currentColor;
+  color: #f5f5f5 !important;
 }
 .ant-btn-primary > a:only-child::after {
   position: absolute;
@@ -5913,9 +5913,9 @@ html {
 }
 .ant-btn-primary:hover,
 .ant-btn-primary:focus {
-  color: #fff;
-  background: #095cb5;
-  border-color: #095cb5;
+  color: #f5f5f5;
+  background: #009991 !important;
+  border-color: #009991 !important;
 }
 .ant-btn-primary:hover > a:only-child,
 .ant-btn-primary:focus > a:only-child {
@@ -5932,9 +5932,9 @@ html {
   content: '';
 }
 .ant-btn-primary:active {
-  color: #fff;
-  background: #3c9be8;
-  border-color: #3c9be8;
+  color: #f5f5f5 !important;
+  background: #18988F !important;
+  border-color: #18988F !important;
 }
 .ant-btn-primary:active > a:only-child {
   color: currentColor;

@@ -19,6 +19,8 @@ import {
 	withdrawHistoryFetch,
 } from '../../modules';
 
+import backFortem from '../../assets/svg/back.svg'
+
 export const WithdrawScreen = () => {
 	setDocumentTitle('Sacar');
 
@@ -118,9 +120,15 @@ export const WithdrawScreen = () => {
 				</div>
 			</div>
 			<div style={{ position: 'fixed', top: '140px', left: '20px' }}>
-				<img
-					style={{ cursor: 'pointer' }}
+				{/* <img
+						style={{ cursor: 'pointer' }}
 					src="https://img.icons8.com/fluent/48/000000/circled-left.png"
+					onClick={() => history.push({ pathname: '/wallets' })}
+					alt="Back"
+				/> */}
+				<img
+					style={{ cursor: 'pointer', marginTop: '45px', width: '30px' }}
+					src={backFortem}
 					onClick={() => history.push({ pathname: '/wallets' })}
 					alt="Back"
 				/>

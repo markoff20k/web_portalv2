@@ -17071,6 +17071,13 @@
     "use-callback-ref" "^1.2.5"
     "use-sidecar" "^1.0.5"
 
+"react-fusioncharts@^4.0.0":
+  "integrity" "sha512-XPYLfDZp4+UT6/jziFPZbdVbpS0g4kseZkEaB2/CnnB83vsFeBNISP96jjL3lV8SXC5CuWmanELtwqQ+G8mhEg=="
+  "resolved" "https://registry.npmjs.org/react-fusioncharts/-/react-fusioncharts-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "uuid" "^3.2.1"
+
 "react-ga@^2.6.0":
   "integrity" "sha512-AjC7UOZMvygrWTc2hKxTDvlMXEtbmA0IgJjmkhgmQQ3RkXrWR11xEagLGFGaNyaPnmg24oaIiaNPnEoftUhfXA=="
   "resolved" "https://registry.npmjs.org/react-ga/-/react-ga-2.7.0.tgz"
@@ -20985,6 +20992,11 @@
   "integrity" "sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA=="
   "resolved" "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
   "version" "1.0.1"
+
+"uuid@^3.2.1":
+  "integrity" "sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
+  "version" "3.4.0"
 
 "uuid@^3.3.2":
   "integrity" "sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A=="

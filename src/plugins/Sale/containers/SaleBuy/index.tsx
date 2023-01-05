@@ -27,7 +27,7 @@ import { Decimal } from '../../../../components';
 
 
 
-import './SaleBuy.css';
+//import './SaleBuy.css';
 interface SaleBuyProps {
 	uid: string;
 	sale: SaleItem;
@@ -315,7 +315,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 				type="default"
 				size="large"
 				block
-				style={{ height: '3rem', color: '#f5f5f5', background: '#009991', margin: '0 auto',  textTransform: 'uppercase', padding: '10px, 15px', borderRadius: '5px', width: '100%', fontSize: '16px' }}
+				style={{ height: '2.5em', color: '#f5f5f5', background: '#009991', margin: '0 auto',  textTransform: 'uppercase', padding: '1em, 1.5em', borderRadius: '5px', width: '100%', fontSize: '1em' }}
 				disabled={handleBuyDisabled()}
 				onClick={showBuyConfirmModal}
 			>Comprar Tokens
@@ -324,7 +324,7 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 		);
 	} else {
 		buyButton = (
-			<a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{ width: '100%',  border: '1px solid #009991 ',  fontSize: '17px', position: 'absolute',  background: 'transparent'}}>Acessar plataforma <i className="icon"><FiLogIn /></i></a>
+			<a className="btn-default btn-icon icon-btn-wrap" href="/signin" style={{ width: '100%',  border: '1px solid #009991 ',  fontSize: '1.1em', position: 'absolute',  background: 'transparent'}}>Acessar plataforma <i className="icon"><FiLogIn /></i></a>
 		);
 	}
 
@@ -333,11 +333,11 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			return (
 				<React.Fragment>
 					<div className="" >
-						<span style={{ fontSize: '14px', color: '#f5f5f5', background: 'transparent', marginTop: '10px' }}>Quantidade:</span>
+						<span style={{ fontSize: '0.8em', color: '#f5f5f5', background: 'transparent', marginTop: '10px' }}>Quantidade:</span>
 						<Tooltip title={'Digite a quantidade de tokens que deseja comprar'}  placement="topLeft" color='#009991' >
 
 						<Input
-							size="small"
+							size="large"
 							autoFocus={type === 'ongoing'}
 							value={quantityInputState}
 							type='number'
@@ -347,18 +347,17 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 			
 						/> </Tooltip>
 						{quantityInputState < props.sale.min_buy ? (
-							<span style={{ fontSize: '14px', color: '#ED0A3F', opacity: 0.9, background: 'transparent' }}>
+							<span style={{ fontSize: '0.75em', color: '#ED0A3F', opacity: 0.91, background: 'transparent' }}>
 								** A quantidade deve ser maior que {props.sale.min_buy} tokens
 							</span>
 						) : (
 							''
 						)}
 					</div>
-					<div className="price">
-						<span style={{ fontSize: '14px', color: '#f5f5f5',
-						 background: 'transparent' }}>Ao preço unitário de:</span>
+					<div className="">
+						<span style={{ fontSize: '0.8em', color: '#f5f5f5', background: 'transparent', marginTop: '10px' }}>Ao preço unitário de:</span>
 						<Input
-							size="small"
+							size="large"
 							disabled
 							value={priceState}
 							type="number"
@@ -366,8 +365,8 @@ export const SaleBuy: React.FC<SaleBuyProps> = (props: SaleBuyProps) => {
 							addonAfter={quoteCurrencyState.toUpperCase()}
 						/>
 					</div>
-					<div className="total">
-						<span style={{ fontSize: '14px', color: 'white', background: 'transparent' }}>O total da sua compra será de: </span>
+					<div className="">
+						<span style={{ fontSize: '0.8em', color: '#f5f5f5', background: 'transparent', marginTop: '10px' }}>O total da sua compra será de: </span>
 						<Input
 							size="large"
 							disabled

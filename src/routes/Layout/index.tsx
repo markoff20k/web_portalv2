@@ -110,7 +110,7 @@ import { DocumentationScreen } from '../../v2/src/screens';
 
 import { LandingScreenMobile } from '../../v2/src/mobile/screens';
 
-import { WalletsScreen } from '../../v2/src/screens'
+import { WalletsScreen } from '../../v2/src/screens';
 
 import FAQ from "../../screens/FortemFAQ/FAQ";
 
@@ -478,8 +478,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 
 					<PublicRoute
-						loading={userLoading} 
-						isLogged={isLoggedIn}
+
 						path="/faq"
 						component={FAQ}
 					/>

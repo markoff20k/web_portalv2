@@ -16,7 +16,7 @@ export interface DepositFiatProps {
 const bankData = uid => [
 	{
 		key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.bankName" />,
-		value: 'FORTEM Bank',
+		value: '12.345.678-0001/00',
 	},
 	{
 		key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.accountNumber" />,
