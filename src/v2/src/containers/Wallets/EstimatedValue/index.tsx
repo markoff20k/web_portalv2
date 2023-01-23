@@ -30,7 +30,7 @@ import { eventFetch, selectEvents,} from '../../../../../modules';
 
 import news from '../../../../../screens/FortemIOHomePage/images/news.svg';
 
-import mainBanner from './main_banner.jpg';
+import mainBanner from './bg-estimated-part.png';
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
 import Flash from 'react-reveal/Flash';
@@ -324,9 +324,54 @@ class EstimatedValueContainer extends React.Component<Props> {
 
         return (
             <div className="pg-estimated-value-wallet bg_image w-container" >
-                <img src={mainBanner} style={{filter: 'blur(3px)', backgroundSize: 'cover', opacity: '0.2', width: '100%', height: '400px'}}/>
+                
+
+
+
+
+
+
                 <div className="pg-estimated-value__container position-absolute" >
+
+                {/* <div className="vtabs customvtab">
+						          <ul className="nav nav-tabs tabs-vertical" role="tablist">
+							          <li className="nav-item"> <a className="nav-link active" data-toggle="tab" href="#home3" role="tab" aria-expanded="true"><span className="hidden-sm-up"><i className="ion-home"></i></span> <span className="hidden-xs-down">Home</span> </a> </li>
+							          <li className="nav-item"> <a className="nav-link" data-toggle="tab" href="#profile3" role="tab" aria-expanded="false"><span className="hidden-sm-up"><i className="ion-person"></i></span> <span className="hidden-xs-down">Profile</span></a> </li>
+							          <li className="nav-item"> <a className="nav-link" data-toggle="tab" href="#messages3" role="tab" aria-expanded="false"><span className="hidden-sm-up"><i className="ion-email"></i></span> <span className="hidden-xs-down">Messages</span></a> </li>
+						          </ul>
+                </div>  */}
+
+                {/* <div className="tab-content">
+						<div id="navpills-1" className="tab-pane active">
+							<div className="row">
+								<div className="col-md-2"> <img src="../images/card/img1.jpg" className="img-fluid" alt="" /> </div>
+								<div className="col-md-10">3 ac mi vel tellus condimentum semper. In nec finibus erat. Sed ultrices ligula mi, a euismod metus egestas in. Nulla imperdiet neque at massa fringilla dignissim a id orci. Nam faucibus, ipsum interdum bibendum rutrum, libero odio vestibulum purus, non sollicitudin risus nunc et odio.
+									<p>
+										<br/> Vestibulum volutpat, ante sit amet dignissim imperdiet, diam diam sodales orci, in gravida lorem erat eu diam. Nulla lorem nunc, ultrices ac dignissim et, dignissim nec lacus. Praesent euismod lorem eget justo lacinia rutrum sed at mi.</p>
+								</div>
+							</div>
+						</div>
+						<div id="navpills-2" className="tab-pane">
+							<div className="row">
+								<div className="col-md-10"> 1 ac mi vel tellus condimentum semper. In nec finibus erat. Sed ultrices ligula mi, a euismod metus egestas in. Nulla imperdiet neque at massa fringilla dignissim a id orci. Nam faucibus, ipsum interdum bibendum rutrum, libero odio vestibulum purus, non sollicitudin risus nunc et odio.
+									<p>
+										<br/> Vestibulum volutpat, ante sit amet dignissim imperdiet, diam diam sodales orci, in gravida lorem erat eu diam. Nulla lorem nunc, ultrices ac dignissim et, dignissim nec lacus. Praesent euismod lorem eget justo lacinia rutrum sed at mi.</p>
+								</div>
+								<div className="col-md-2"> <img src="../images/card/img2.jpg" className="img-fluid" alt="" /> </div>
+							</div>
+						</div>
+						<div id="navpills-3" className="tab-pane">
+							<div className="row">
+								<div className="col-md-2"> <img src="../images/card/img3.jpg" className="img-fluid" alt="" /> </div>
+								<div className="col-md-10"> 2 ac mi vel tellus condimentum semper. In nec finibus erat. Sed ultrices ligula mi, a euismod metus egestas in. Nulla imperdiet neque at massa fringilla dignissim a id orci. Nam faucibus, ipsum interdum bibendum rutrum, libero odio vestibulum purus, non sollicitudin risus nunc et odio.
+									<p>
+										<br/> Vestibulum volutpat, ante sit amet dignissim imperdiet, diam diam sodales orci, in gravida lorem erat eu diam. Nulla lorem nunc, ultrices ac dignissim et, dignissim nec lacus. Praesent euismod lorem eget justo lacinia rutrum sed at mi.</p>
+								</div>
+							</div>
+						</div>
+					</div> */}
                     <div className="value-container">
+
                         <div >
                         <details>
                         <summary>
@@ -405,14 +450,14 @@ class EstimatedValueContainer extends React.Component<Props> {
                 {/*{[sortedWallet[0].value, sortedWallet[1].value]}*/}
 
 
-                <span className="position-absolute pg-estimated-value__container-charts" style={{marginTop: '-160px', marginLeft: '460px'}} >
+                {/* <span className="position-absolute pg-estimated-value__container-charts" style={{marginTop: '-140px', marginLeft: '460px'}} >
                 <span style={{color: '#F5F5F5', }}> Evolução patrimonial </span>
                 <LineChart
                     chartData={lineChartDataCharts}
                     chartOptions={lineChartOptionsCharts}
                 />
                 
-                </span>
+                </span> */}
 
                 
 

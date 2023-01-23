@@ -29,8 +29,9 @@ export const ProfileQuickContainer: React.FC = () => {
 						<div className="td-pg-profile__quick__info--top d-flex align-items-center">
 							<div className="td-pg-profile__quick__info--top__email" style={{marginRight: '0.5em', fontSize: '1'}}>{user.email}</div>
 							<div className="td-pg-profile__quick__info--top__user-id">
+								<br/>
 								<span className="td-pg-profile--color--second td-pg-profile__quick__info--top__user-id--label" style={{fontSize: '1'}}>
-									Fortem ID:
+									Conta Digital:
 								</span>
 								<span className="td-pg-profile__quick__info--top__user-id--content" style={{marginLeft: '0.5em', fontSize: '1'}}>{user.uid}</span>
 								
@@ -38,7 +39,8 @@ export const ProfileQuickContainer: React.FC = () => {
 						</div>
 						<div className="td-pg-profile--color--second td-pg-profile__quick__info--bottom">
 							<span className="td-pg-profile__quick__info--bottom__last-login--time mr-2" style={{fontSize: '1'}}>
-								Último login: {time}
+								{/* Último login: {time} */}
+
 							</span>
 							{/* <span className="td-pg-profile__quick__info--bottom__last-login--ip" style={{marginLeft: '10px', fontSize: '16px'}}>IP : {ip}</span> */}
 	

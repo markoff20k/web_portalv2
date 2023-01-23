@@ -41,7 +41,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 	};
 
 	return (
-		<div className="td-pg-profile--radius td-pg-profile__active-step">
+		<div className="td-pg-profile__active-step">
 			
 			<span className="td-pg-profile__active-step__desc" style={{fontSize: '1.1em', color: '#c0c0c0'}}>Inicie sua jornada digital em apenas 3 passos:</span>
 			<div className="td-pg-profile__active-step__content d-flex">
@@ -87,9 +87,10 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 						style ={{width: '30px', height: '30px'}}>
 						{isExistBalance ? svgActive : '3'}
 					</span>
-					<span className="td-pg-profile__active-step__content__item__title">3. Faça seu primeiro depósito (Reais ou Cripto)</span>
+					{/* <span className="td-pg-profile__active-step__content__item__title">3. Faça seu primeiro depósito (Reais ou Cripto)</span> */}
+					<span className="td-pg-profile__active-step__content__item__title">3. Conclua seu cadastro</span>
 					<span className="td-pg-profile--color--second td-pg-profile__active-step__content__item__desc">
-						Adicione reais ou cripto em sua carteira Fortem para iniciar seus investimentos digitais.
+						Complete seu perfil e tenha acesso a todos os benefícios da sua conta. É rápido e simples.
 					</span>
 					{user.otp && !isExistBalance ? (
 						<Button
@@ -97,7 +98,7 @@ export const ProfileActiveStep: React.FC<ProfileActiveStepProps> = () => {
 							onClick={handleToWallet}
 							variant="sign-up"
 						>
-							Minhas carteiras
+							Concluir cadastro
 						</Button>
 					) : null}
 				</div>

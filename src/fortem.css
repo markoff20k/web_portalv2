@@ -1105,26 +1105,37 @@ flex-direction: row !important;
 {/* wallets -> estimatedValue */}
 .pg-estimated-value-wallet {
 
-
+    padding: 5px !important;
     display: flex !important;
-  
-    //background: #1f1f1f;
-    background-color: transparent;
-    opacity: 0.85;
-	border-radius: 10px;
+    background-size: 100%, 50vh !important;
+    background-repeat: no-repeat;
+    background: url(./assets/images/bg-estimated-part.jpeg);
+    /* background-blend-mode: darker, dark; */
+    /* background-blend-mode: darken, luminosity; */
+    /* backdrop-filter: blur(17px) saturate(70%); */
+
+    /* background-color: gray; */
+    /* background: linear-gradient(95deg, transparent 25%, transparent 45%, #c0c0c0 75%, gray 100%) 95%/200% 100% !important; */
+
+    box-sizing: border-box !important;
+	border-radius: 5px;
     border: 1px solid var(--wallets-item-border-color);	
-	//padding-left: 38px;
-    //max-width: 1200px;
+	padding-left: 38px;
+    max-width: 1200px;
     font-size: 1rem;
-    //padding: 20px !important;
+    padding: 20px !important;
     max-width: 1170px !important; 
+     height: 340px !important;
+    /* height: 840px !important; */
+
         
     margin-top: 20px;
-    //margin: 20 0 auto ;
+
+    /* //margin: 20 0 auto ; */
 
 }.pg-estimated-value__container {
-		font-size: 15px;
-		padding: 30px !important;
+		font-size: 1em;
+		padding: 15px !important;
 		
         
         //margin: 20px ;
@@ -1132,13 +1143,18 @@ flex-direction: row !important;
         
 	}.pg-estimated-value__container .value-container {
 			//background: #1f1f1f;
-			border-radius: 10px;
+            /* background-repeat: no-repeat; */
+            /* background: url(./assets/images/bg-estimatedItem.jpeg); */
+            /* background-repeat: no-repeat !important; */
+            /* background-size: 30vw 40vh  !important; */
+			border-radius: 4px;
 			//margin-right: var(--gap);
-			padding: 10px 15px;
+			
 			//vertical-align: middle;
+             
+			/* background: rgba(255,255,255,0.2); */
+			/* backdrop-filter: blur(2px);  */
             
-			background: rgba(255,255,255,0.2);
-			backdrop-filter: blur(2px);
 		}
         
         
@@ -1148,15 +1164,32 @@ flex-direction: row !important;
 			//margin-right: var(--gap);
 			//padding: 10px 15px;
 			//vertical-align: middle;
-                    padding: 10px 15px;
+                    padding: 5px 5px !important;
 					background: transparent !important;
 					backdrop-filter: blur(3px);
                     border-radius: 10px;
                     color: var(--yellow);
                     font-weight: 600;
                     width: 100%;
+                    margin-top: -220px !important;
 		}    
-        
+        .pg-estimated-value__container .value-container div {
+
+            color: #c0c0c0;
+			background: rgba(255,255,255,0.2); 
+			backdrop-filter: blur(2px); 
+            border: 1px solid transparent;
+            border-radius: 15px;
+            
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+
+            margin-top: 10px;
+
+
+        }
         
         .pg-estimated-value__container .value-container .value {
 				color: var(--yellow);
@@ -1166,19 +1199,19 @@ flex-direction: row !important;
 				border-radius: 10px;
 				color: var(--yellow);
 				font-weight: 500;
-				margin-left: 5px;
-				padding: 4px 10px;
+				
+				padding: 4px 5px;
 			}@media screen and (min-width: 340px) {
 		.pg-estimated-value__container {
-			font-size: 16px;
+			font-size: 1em;
 		}
 }@media screen and (min-width: 400px) {
 		.pg-estimated-value__container {
-			font-size: 16px;
+			font-size: 1em;
 		}
 }@media screen and (min-width: 600px) {
 		.pg-estimated-value__container {
-			font-size: 16px;
+			font-size: 1em;
 		}
 }@media screen and (min-width: 800px) {
 		.pg-estimated-value__container {
@@ -1233,21 +1266,31 @@ flex-direction: row !important;
 
     opacity: 1;
     left: 10px;
-    width: 60px !important;
-    height: 60px !important;
+    max-width: 5em !important;
+    max-height: 5em !important;
   }.pg-wallet .cr-crypto-icon img {
       margin-right: 5px;
-      width: 64px ;
+      max-width: 5em !important;
+
     }.pg-wallet .cr-wallet-list {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
+    background: url(./assets/images/bg-wallets-mainpage.jpeg);
+    background-size: 100% 580px;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(17px) saturate(70%) !important;
+
+    box-sizing: border-box !important;
     border-radius: 10px !important;
+
     border: 1px solid var(--wallets-item-border-color);
     flex-direction: column !important;
     margin-bottom: 0 !important;
     margin-top: 3px !important;
+    margin-right: 20px !important;
     
     height: 100% !important;
-    width: 30vw !important;
+    max-width: 38vw !important;
+    
 
   }.pg-wallet .cr-wallet-list li {
       padding-top: 0 !important;
@@ -1261,14 +1304,15 @@ flex-direction: row !important;
       
         }.pg-wallet .cr-wallet-list .cr-wallet-item {
     
-  
-      color: var(--wallets-item-font) !important;
-      background-color: transparent  !important;
+        height: 80px !important;
+        padding-top: 10px !important;
+        color: var(--wallets-item-font) !important;
+        background-color: transparent  !important;
     }.pg-wallet .cr-wallet-list .cr-wallet-item:hover {
     
         background: var(--beneficiaries-primary-0-06) !important;
         opacity: 1 !important;
-        border-bottom: 1px solid #FDA736 20%!important;
+        /* border-bottom: 1px solid #FDA736 20%!important; */
         
       }.pg-wallet .cr-wallet-list .cr-wallet-item__info {
         align-items: center ;
@@ -1279,7 +1323,7 @@ flex-direction: row !important;
           max-height: calc(var(--gap) * 4.5) ;
         }.pg-wallet .cr-wallet-list .cr-wallet-item__description {
         background: transparent ;
-        font-size: 16px !important;
+        font-size: 1em !important;
       }.pg-wallet .cr-wallet-list .cr-wallet-item__description span {
           color: #f9a912 !important;
         }/*cinza claro */.pg-wallet .cr-wallet-list .cr-wallet-item__description span:nth-child(1) {
@@ -1669,7 +1713,7 @@ flex-direction: row !important;
 
 }.pg-wallet .cr-wallet-item--active {
       background: transparent !important;
-      border-left: 1px solid #FDA736;
+      /* border-left: 1px solid #FDA736; */
       
       outline: none !important;
     }.pg-wallet .cr-wallet-item--active .cr-wallet-item__icon,
@@ -2262,7 +2306,7 @@ flex-direction: row !important;
 	}.cr-wallet-item__single__image-icon {
 		margin-right: calc(var(--gap) * 3) !important;
 		height: 60px !important;
-        border-radius: 50px !important;
+        border-radius: 50% !important;
         
 	}.cr-wallet-item__single .cr-wallet-item__icon-code {
 			background: transparent;
@@ -10406,3 +10450,55 @@ Copyright (c) 2015 Daniel Eden
 
 
 }
+
+
+/*Vertical tabs*/
+.vtabs {
+    display: table; }
+    .vtabs .tabs-vertical {
+      width: 150px;
+      border-bottom: 0px;
+      border-right: 1px solid rgba(128, 128, 128, 0.13);
+      display: table-cell;
+      vertical-align: top; }
+      .vtabs .tabs-vertical li .nav-link {
+        color: #262626;
+        margin-bottom: 10px;
+        border: 0px;
+        border-radius: 5px 0 0 5px; }
+    .vtabs .tab-content {
+      display: table-cell;
+      padding: 10px;
+      vertical-align: top; }
+  
+  .tabs-vertical li .nav-link:hover, .tabs-vertical li .nav-link:active, .tabs-vertical li .nav-link:focus, .tabs-vertical li .nav-link.active {
+    border: 0px;
+    color: #ffffff; }
+  
+  /*Custom vertical tab*/
+  .customvtab .tabs-vertical li .nav-link:hover, .customvtab .tabs-vertical li .nav-link:active, .customvtab .tabs-vertical li .nav-link:focus, .customvtab .tabs-vertical li .nav-link.active {
+    background: transparent !important;
+    border: 0px;
+    margin-right: -1px; }
+  
+  .customtab2 li a.nav-link {
+    border: 0px;
+    margin-right: 3px;
+    color: #737373; }
+    .customtab2 li a.nav-link:hover, .customtab2 li a.nav-link:active, .customtab2 li a.nav-link:focus, .customtab2 li a.nav-link.active {
+      color: #ffffff; }
+  
+  @media (max-width: 767px) {
+    .vtabs .tabs-vertical {
+      width: auto; } }
+
+/*tab*/
+.tabcontent-border {
+    border: 1px solid #bfbfbf;
+    border-top: 0px; }
+  
+  .customtab li a.nav-link {
+    border: 0px;
+    padding: 0.5rem 0.75rem;
+    color: #737373; }
+
