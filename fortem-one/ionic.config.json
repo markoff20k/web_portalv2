@@ -1,0 +1,7 @@
+{
+  "name": "Fortem ONE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

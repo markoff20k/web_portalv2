@@ -15,16 +15,16 @@ export const defaultConfig: Config = {
 
 	
 	api: {
-		authzURL: 'https://www.fortem1.com.br/api/v2/auth',
-		switchURL: 'https://www.fortem1.com.br/api/v2/applogic',
-		transactionURL: 'https://www.fortem1.com.br/api/v2/trade',
-		ieoURL: 'https://www.fortem1.com.br/api/v2/peatio',
+		authzURL: 'https://cert.fortem1.com.br/api/v2/auth',
+		switchURL: 'https://cert.fortem1.com.br/api/v2/applogic',
+		transactionURL: 'https://cert.fortem1.com.br/api/v2/trade',
+		ieoURL: 'https://cert.fortem1.com.br/api/v2/trade',
 
-		infoURL: 'https://www.fortem1.com.br/api/v2/info',
-		newKycURL: 'https://www.fortem1.com.br/api/v2/newKyc',
-		statisticUrl: 'https://www.fortem1.com.br/api/v2/statistic',
+		infoURL: 'https://cert.fortem1.com.br/api/v2/info',
+		newKycURL: 'https://cert.fortem1.com.br/api/v2/newKyc',
+		statisticUrl: 'https://cert.fortem1.com.br/api/v2/statistic',
 		//downstreamURL: 'wss://www.fortem1.com.br/api/public/',
-		downstreamURL: 'wss://www.fortem1.com.br/api/v2/websocket',
+		downstreamURL: 'wss://cert.fortem1.com.br/api/v2/websocket',
 		                
 
 	},
