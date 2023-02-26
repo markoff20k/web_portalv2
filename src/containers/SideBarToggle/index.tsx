@@ -14,6 +14,9 @@ import {
 	toggleSidebar,
 } from '../../modules';
 
+import './SideBarToggle.pcss';
+
+
 interface ReduxProps {
 	colorTheme: string;
 	userLoggedIn: boolean;

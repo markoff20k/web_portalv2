@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-//import { TOGGLE_SIDEBAR } from 'modules/public/globalSettings/constants';
+import { TOGGLE_SIDEBAR } from 'modules/public/globalSettings/constants';
 import * as React from 'react';
 import { Nav } from 'react-bootstrap';
 import { FaAward, FaGift, FaHistory, FaSignOutAlt, FaStar, FaUserCircle, FaUserPlus } from 'react-icons/fa';
@@ -9,6 +9,9 @@ import { Link, useHistory } from 'react-router-dom';
 import { logoutFetch, selectUserLoggedIn } from '../../modules';
 
 import { NavBar } from '../NavBar';
+
+import  { SideBarToggle } from '../SideBarToggle'
+
 
 //import './HeaderAuthToolbar.pcss';
 
@@ -432,7 +435,7 @@ export const HeaderAuthToolbar: React.FC = () => {
 			<div className="container-subheader">
 				<nav className="subheader d-flex flex-row justify-content-between align-items-center">
 					<div className="subheader__left-menu d-flex flex-row align-items-center">
-					
+						
 						{renderUnLogin()}
 						{renderProfileTab()}
 						{renderDashboardTab()}
@@ -448,8 +451,9 @@ export const HeaderAuthToolbar: React.FC = () => {
 
 					<div className="subheader__right-menu d-flex align-items-center flex-row">
 						{renderUnLogin()}
-						
+						<SideBarToggle />
 						<NavBar />
+						
 						<div className="white-line" style={{marginTop: '-12px'}}></div>
 
 					</div>

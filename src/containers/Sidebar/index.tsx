@@ -11,7 +11,7 @@ import { LogoutIcon } from '../../assets/images/sidebar/LogoutIcon';
 import { ProfileIcon } from '../../assets/images/sidebar/ProfileIcon';
 import { SidebarIcons } from '../../assets/images/sidebar/SidebarIcons';
 import { pgRoutes } from '../../constants';
-//import './Sidebar.pcss';
+import './Sidebar.pcss';
 import {
     changeLanguage,
     changeUserDataFetch,
@@ -79,9 +79,12 @@ class SidebarContainer extends React.Component<Props, State> {
             'pg-sidebar-wrapper--hidden': !isActive,
         });
 
+        
+
         return (
             <div className={sidebarClassName}>
                 {this.renderProfileLink()}
+                {this.renderMainPageLink()}
                 <div className="pg-sidebar-wrapper-nav">
                     {pgRoutes(isLoggedIn).map(this.renderNavItems(address))}
                 </div>
@@ -158,6 +161,38 @@ class SidebarContainer extends React.Component<Props, State> {
             </div>
         );
     };
+
+    public renderMainPageLink = () => {
+        const { isLoggedIn, location } = this.props;
+        const handleLinkChange = () => this.props.toggleSidebar(false);
+        const address = location ? location.pathname : '';
+        const isActive = address === '/profile';
+
+        const iconClassName = classnames('pg-sidebar-wrapper-nav-item-img', {
+            'pg-sidebar-wrapper-nav-item-img--active': isActive,
+        });
+
+        return isLoggedIn && (
+            <div>
+                <div className="avatarImageBG">
+                {/* <Link to="/profile" onClick={handleLinkChange} className={`${isActive && 'route-selected'}`}>
+                    <div className="pg-sidebar-wrapper-profile-link">
+                        <ProfileIcon className={iconClassName} />
+                        <p className="pg-sidebar-wrapper-profile-link-text">
+                            <FormattedMessage id={'page.header.navbar.profile'} />
+                        </p>
+                    </div>
+                </Link> */}
+                </div>
+                <p className="userUsernameProfile"> {this.props.user.username} </p>
+                {/* <p className="userKYCProfile"> {this.props.user.email} </p> */}
+                {/* <p className="userKYCProfile"> {this.props.user.level} </p> */}
+                {/* <p className="userAccountProfile">Conta: {this.props.user.uid}</p> */}
+            </div>
+            
+        );
+    };
+
 
     public renderLogout = () => {
         const { isLoggedIn } = this.props;
