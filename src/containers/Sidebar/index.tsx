@@ -27,6 +27,11 @@ import {
     toggleSidebar,
     User,
 } from '../../modules';
+// const IconDash = require('../../assets/svg/dash.svg');
+
+
+import { MainpageIcon } from '../../assets/images/sidebar/MainpageIcon';
+
 
 interface State {
     isOpenLanguage: boolean;
@@ -83,8 +88,9 @@ class SidebarContainer extends React.Component<Props, State> {
 
         return (
             <div className={sidebarClassName}>
-                {this.renderProfileLink()}
-                {this.renderMainPageLink()}
+                {this.renderUserInfoLink()}
+                {this.renderMainpageLink()}
+                {this.renderCriptoExchangeProLink()}
                 <div className="pg-sidebar-wrapper-nav">
                     {pgRoutes(isLoggedIn).map(this.renderNavItems(address))}
                 </div>
@@ -138,7 +144,35 @@ class SidebarContainer extends React.Component<Props, State> {
         );
     };
 
-    public renderProfileLink = () => {
+    public renderMainpageLink = () => {
+        const { isLoggedIn, location } = this.props;
+        const handleLinkChange = () => this.props.toggleSidebar(false);
+        const address = location ? location.pathname : '';
+        const isActive = address === '/profile';
+
+        const iconClassName = classnames('pg-sidebar-wrapper-nav-item-img', {
+            'pg-sidebar-wrapper-nav-item-img--active': isActive,
+        });
+
+        return isLoggedIn && (
+            <div className="pg-sidebar-wrapper-profile">
+                <Link to="/dash" onClick={handleLinkChange} className={`${isActive && 'route-selected'}`}>
+                    <div className="pg-sidebar-wrapper-profile-link">
+                        <MainpageIcon className={iconClassName} />
+                        {/* <img src={IconDash} className="iconClassName mr-2 subheader__right-menu__item__title__svg" style={{filter: 'invert(66%) sepia(89%) saturate(1202%) hue-rotate(352deg) brightness(101%) contrast(95%)', width: '26px',}} /> */}
+						
+						
+                        <p className="pg-sidebar-wrapper-profile-link-text">
+                            {/* <FormattedMessage id={'page.header.navbar.profile'} /> */}
+                            Início
+                        </p>
+                    </div>
+                </Link>
+            </div>
+        );
+    };
+
+    public renderCriptoExchangeProLink = () => {
         const { isLoggedIn, location } = this.props;
         const handleLinkChange = () => this.props.toggleSidebar(false);
         const address = location ? location.pathname : '';
@@ -162,7 +196,9 @@ class SidebarContainer extends React.Component<Props, State> {
         );
     };
 
-    public renderMainPageLink = () => {
+
+
+    public renderUserInfoLink = () => {
         const { isLoggedIn, location } = this.props;
         const handleLinkChange = () => this.props.toggleSidebar(false);
         const address = location ? location.pathname : '';
@@ -171,6 +207,16 @@ class SidebarContainer extends React.Component<Props, State> {
         const iconClassName = classnames('pg-sidebar-wrapper-nav-item-img', {
             'pg-sidebar-wrapper-nav-item-img--active': isActive,
         });
+        var frase = 'Perfil Verficado';
+        if (this.props.user.level === 1)  {
+            frase = 'Perfil não Verificado X'
+        }
+        else {
+            frase = 'Perfil Verificado ✓'
+
+            }
+        
+
 
         return isLoggedIn && (
             <div>
@@ -186,8 +232,13 @@ class SidebarContainer extends React.Component<Props, State> {
                 </div>
                 <p className="userUsernameProfile"> {this.props.user.username} </p>
                 {/* <p className="userKYCProfile"> {this.props.user.email} </p> */}
-                {/* <p className="userKYCProfile"> {this.props.user.level} </p> */}
-                {/* <p className="userAccountProfile">Conta: {this.props.user.uid}</p> */}
+
+
+                {/* {if (this.props.user.level === 1) return <p className="userKYCProfile"> Perfil Verificado ✓</p>
+                else return <p className="userKYCProfile"> Perfil Verificado ✓</p>
+                } */}
+                <p className="userKYCProfile"> {frase} </p>
+                <p className="userAccountProfile">Conta: &nbsp; <span style={{fontWeight:600, letterSpacing: '1px'}}>{this.props.user.uid}</span></p>
             </div>
             
         );

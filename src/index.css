@@ -46982,10 +46982,10 @@ background-color: var(--color-darker)!important;
 	}
 
 .pg-sidebar-wrapper-profile {
-		align-items: center;
-		border-bottom: 1px solid var(--sidebar-border-color);
+		align-items: center !important;
+		/* border-bottom: 1px solid var(--sidebar-border-color); */
 		display: flex;
-		justify-content: space-between;
+		justify-content: center !important;
 		margin-bottom: 7px;
 		padding: 7px 0;
 	}
@@ -47007,8 +47007,9 @@ background-color: var(--color-darker)!important;
 			}
 
 .pg-sidebar-wrapper-profile-link:hover {
-				background-color: var(--sidebar-item-background-color-hover) !important;
-				color: var(--sidebar-item-text-color-hover);
+				background-color: #272c35!important;
+				border-radius: 12px;
+				color: pink;
 			}
 
 .pg-sidebar-wrapper-profile-link:hover path {
@@ -47203,6 +47204,7 @@ background-color: var(--color-darker)!important;
 	align-items: center;
 	justify-content: center !important;
 	margin-left: 35%;
+	margin-top: 20px;
 	
 	height: 70px;
 	width: 70px;
@@ -47213,21 +47215,37 @@ background-color: var(--color-darker)!important;
 .userUsernameProfile {
 	display: flex;
 	color: #fff;
+	font-family: 'Poppins';
 	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	justify-content: center;
+	margin: 0px !important;
+	margin-top: 15px !important;
 	
-	justify-content: center !important;
-	margin-top: 5px;
-	line-height: 18px;
 
 }
 
 .userAccountProfile {
 	display: flex;
-	color: #fff;
-	font-size: 16px;
-	
+	color: #C2C2C2;
+	font-family: 'Poppins';
+	font-size: 14px;
+	justify-content: center;
+	margin: 0px !important;
+	line-height: 24px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid var(--sidebar-border-color);
+
+}
+
+.userKYCProfile {
+	display: flex;
+	color: #C2C2C2;
+	font-family: 'Poppins';
+	font-size: 14px;
 	justify-content: center !important;
-	margin-top: 5px;
-	line-height: 18px;
+	margin: 0px !important;
+	line-height: 24px;
 
 }

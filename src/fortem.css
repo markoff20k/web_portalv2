@@ -4130,7 +4130,7 @@ margin-left: 20px;
   text-decoration: underline;
 }.pg-sign-in-screen-basic {
 
-	background: url(./assets/images/bg-signin.jpg);
+	background: url(./assets/images/bg-signin-ticker.png);
     box-sizing: border-box;
     font-family: 'Inter', sans-serif !important;
     padding-bottom: 60px !important;
@@ -4141,9 +4141,9 @@ margin-left: 20px;
 	height: 100% !important;
 	justify-content: center;
 	margin: 0 auto !important;
-    opacity: 0.71 !important;
-    -webkit-backdrop-filter: blur(17px) saturate(70%) !important;
-    backdrop-filter: blur(10px) saturate(135%) !important;
+    opacity: 0.91 !important;
+    -webkit-backdrop-filter: blur(30px) saturate(70%) !important;
+    /* backdrop-filter: blur(10px) saturate(135%) !important; */
 
   }
   .pg-sign-in-screen-basic .pg-sign-in-screen-basic__container {

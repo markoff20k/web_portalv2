@@ -119,6 +119,8 @@ import Status from "../../template_react_status/src/components/App";
 import { ProfileScreen2 } from 'screens/ProfileScreen2';
 
 
+import Default from "../../ui_chakra/views/Dashboard/Default.js";
+
 interface ReduxProps {
 	colorTheme: string;
 	currentMarket?: Market;
@@ -547,6 +549,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
+
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/dashboard/default" component={Default} />
 					
 					{/*Wallets*/}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dash" exact component={WalletsScreen} />
