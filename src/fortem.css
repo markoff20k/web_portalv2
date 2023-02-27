@@ -4130,7 +4130,8 @@ margin-left: 20px;
   text-decoration: underline;
 }.pg-sign-in-screen-basic {
 
-	background: url(./assets/images/bg-signin-ticker23.png);
+	/* background: url(./assets/images/bg-signin-ticker.png); */
+    background-image: url(./assets/images/bg-signin-ticker.png);
     box-sizing: border-box;
     font-family: 'Inter', sans-serif !important;
     padding-bottom: 60px !important;
