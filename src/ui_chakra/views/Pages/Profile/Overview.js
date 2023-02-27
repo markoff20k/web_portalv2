@@ -46,19 +46,19 @@ import ProjectImage2 from "assets/img/ProjectImage2.png";
 import ProjectImage3 from "assets/img/ProjectImage3.png";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
-import { HSeparator } from "components/Separator/Separator";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import LineChart from "../../../components/Charts/LineChart";
+import IconBox from "../../../components/Icons/IconBox";
+import { HSeparator } from "../../../components/Separator/Separator";
 
 // Icons
 import {
   CarIcon,
   LightningIcon,
   LightningWhiteIcon,
-} from "components/Icons/Icons";
+} from "../../../components/Icons/Icons";
 import { BsArrowRight } from "react-icons/bs";
 import {
   FaCube,
@@ -68,7 +68,7 @@ import {
   FaPenFancy,
   FaTwitter,
 } from "react-icons/fa";
-import { IoDocumentsSharp } from "react-icons/io5";
+// import { IoDocumentsSharp } from "react-icons/io5";
 
 // Data
 import {
@@ -76,7 +76,7 @@ import {
   lineChartDataProfile2,
   lineChartOptionsProfile1,
   lineChartOptionsProfile2,
-} from "variables/charts";
+} from "../../../variables/charts";
 
 // This reducer changes the active button based on the current state
 
@@ -206,7 +206,7 @@ function Profile() {
                   bg: "brand.200",
                 }}
                 me={{ base: "none", lg: "20px" }}
-                leftIcon={<Icon color='white' as={IoDocumentsSharp} me='6px' />}
+                // leftIcon={<Icon color='white' as={IoDocumentsSharp} me='6px' />}
                 onClick={() =>
                   dispatch({ type: "SWITCH_ACTIVE", payload: "teams" })
                 }

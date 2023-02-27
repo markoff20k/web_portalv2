@@ -23,21 +23,21 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import "assets/css/vud-dashboard-styles.css";
-import Configurator from "components/Configurator/Configurator";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin";
-import Footer from "components/Footer/Footer.js";
+import Configurator from "../components/Configurator/Configurator";
+import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
+import Footer from "../components/Footer/Footer.js";
 // Custom components
-import MainPanel from "components/Layout/MainPanel";
-import PanelContainer from "components/Layout/PanelContainer";
-import PanelContent from "components/Layout/PanelContent";
+import MainPanel from "../components/Layout/MainPanel";
+import PanelContainer from "../components/Layout/PanelContainer";
+import PanelContent from "../components/Layout/PanelContent";
 // Layout components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import { RtlProvider } from "components/RTLProvider/RTLProvider";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import { SidebarContext } from "contexts/SidebarContext";
+import AdminNavbar from "../components/Navbars/AdminNavbar.js";
+import { RtlProvider } from "../components/RTLProvider/RTLProvider";
+import Sidebar from "../components/Sidebar/Sidebar.js";
+import { SidebarContext } from "../contexts/SidebarContext";
 import React, { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import routes from "routes.js";
+import routes from "../routes.js";
 // Custom Chakra theme
 import theme from "theme/themeAdmin.js";
 export default function Dashboard(props) {

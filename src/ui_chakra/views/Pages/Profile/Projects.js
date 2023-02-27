@@ -42,11 +42,11 @@ import avatar3 from "assets/img/avatars/avatar3.png";
 import avatar4 from "assets/img/avatars/avatar4.png";
 import avatar7 from "assets/img/avatars/avatar7.png";
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import { HSeparator } from "components/Separator/Separator";
-import IconBox from "components/Icons/IconBox";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import { HSeparator } from "../../../components/Separator/Separator";
+import IconBox from "../../../components/Icons/IconBox";
 
 // Icons
 import {
@@ -55,10 +55,10 @@ import {
   InvisionWhiteIcon,
   SlackWhiteIcon,
   SpotifyWhiteIcon,
-} from "components/Icons/Icons";
+} from "../../../components/Icons/Icons";
 import { BsPlus } from "react-icons/bs";
 import { FaCube, FaPencilAlt, FaPenFancy } from "react-icons/fa";
-import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
+// import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
 
 // This reducer changes the active button based on the current state
 
@@ -243,9 +243,9 @@ function Projects() {
                     bg: "brand.200",
                   }}
                   me={{ base: "none", lg: "20px" }}
-                  leftIcon={
-                    <Icon color='white' as={IoDocumentsSharp} me='6px' />
-                  }
+                  // leftIcon={
+                  //    <Icon color='white' as={IoDocumentsSharp} me='6px' />
+                  // }
                   onClick={() =>
                     dispatch({ type: "SWITCH_ACTIVE", payload: "teams" })
                   }
@@ -324,12 +324,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen1} onClose={onClose1}>
                 <MenuButton onClick={onOpen1} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -440,12 +440,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen2} onClose={onClose2}>
                 <MenuButton onClick={onOpen2} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -558,12 +558,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen3} onClose={onClose3}>
                 <MenuButton onClick={onOpen3} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -672,12 +672,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen4} onClose={onClose4}>
                 <MenuButton onClick={onOpen4} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -787,12 +787,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen5} onClose={onClose5}>
                 <MenuButton onClick={onOpen5} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -902,12 +902,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen6} onClose={onClose6}>
                 <MenuButton onClick={onOpen6} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -1020,12 +1020,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen7} onClose={onClose7}>
                 <MenuButton onClick={onOpen7} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'
@@ -1136,12 +1136,12 @@ function Projects() {
               </Flex>
               <Menu placement='left' isOpen={isOpen8} onClose={onClose8}>
                 <MenuButton onClick={onOpen8} alignSelf='flex-start'>
-                  <Icon
+                  {/* <Icon
                     as={IoEllipsisVerticalSharp}
                     color='gray.400'
                     w='20px'
                     h='20px'
-                  />
+                  /> */}
                 </MenuButton>
                 <MenuList
                   border='transparent'

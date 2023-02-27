@@ -1,22 +1,11 @@
-/*!
 
-=========================================================
-* Vision UI PRO Chakra - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-dashboard-pro-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 // import
 // To be changed
 // import Tables from "views/Dashboard/Tables.js";
+
+import React from 'react';
+
 import {
   CartIcon,
   DocumentIcon,
@@ -24,43 +13,43 @@ import {
   PersonIcon,
   StatsIcon,
 } from "components/Icons/Icons";
-import Calendar from "views/Applications/Calendar";
-import DataTables from "views/Applications/DataTables";
-import Kanban from "views/Applications/Kanban.js";
-import Wizard from "views/Applications/Wizard.js";
-import SignInBasic from "views/Authentication/SignIn/SignInBasic.js";
-import SignInCover from "views/Authentication/SignIn/SignInCover.js";
-import SignInIllustration from "views/Authentication/SignIn/SignInIllustration.js";
-import SignUpBasic from "views/Authentication/SignUp/SignUpBasic.js";
-import SignUpCover from "views/Authentication/SignUp/SignUpCover.js";
-import SignUpIllustration from "views/Authentication/SignUp/SignUpIllustration.js";
-import CRM from "views/Dashboard/CRM.js";
-import Default from "views/Dashboard/Default.js";
-import OrderDetails from "views/Ecommerce/Orders/OrderDetails";
-import OrderList from "views/Ecommerce/Orders/OrderList";
-import EditProduct from "views/Ecommerce/Products/EditProduct";
-import NewProduct from "views/Ecommerce/Products/NewProduct";
-import ProductPage from "views/Ecommerce/Products/ProductPage";
-import Billing from "views/Pages/Account/Billing.js";
-import Invoice from "views/Pages/Account/Invoice.js";
-import Settings from "views/Pages/Account/Settings.js";
-import Alerts from "views/Pages/Alerts";
-import Charts from "views/Pages/Charts.js";
-import Pricing from "views/Pages/Pricing.js";
-import Overview from "views/Pages/Profile/Overview.js";
-import Projects from "views/Pages/Profile/Projects.js";
-import Teams from "views/Pages/Profile/Teams.js";
-import General from "views/Pages/Projects/General.js";
-import Timeline from "views/Pages/Projects/Timeline.js";
-import RTLPage from "views/Pages/RTLPage.js";
-import NewUser from "views/Pages/Users/NewUser.js";
-import Reports from "views/Pages/Users/Reports.js";
-import Widgets from "views/Pages/Widgets.js";
+import Calendar from "./views/Applications/Calendar";
+import DataTables from "./views/Applications/DataTables";
+import Kanban from "./views/Applications/Kanban.js";
+import Wizard from "./views/Applications/Wizard.js";
+import SignInBasic from "./views/Authentication/SignIn/SignInBasic.js";
+import SignInCover from "./views/Authentication/SignIn/SignInCover.js";
+import SignInIllustration from "./views/Authentication/SignIn/SignInIllustration.js";
+import SignUpBasic from "./views/Authentication/SignUp/SignUpBasic.js";
+import SignUpCover from "./views/Authentication/SignUp/SignUpCover.js";
+import SignUpIllustration from "./views/Authentication/SignUp/SignUpIllustration.js";
+import CRM from "./views/Dashboard/CRM.js";
+import Default from "./views/Dashboard/Default.js";
+import OrderDetails from "./views/Ecommerce/Orders/OrderDetails";
+import OrderList from "./views/Ecommerce/Orders/OrderList";
+import EditProduct from "./views/Ecommerce/Products/EditProduct";
+import NewProduct from "./views/Ecommerce/Products/NewProduct";
+import ProductPage from "./views/Ecommerce/Products/ProductPage";
+import Billing from "./views/Pages/Account/Billing.js";
+import Invoice from "./views/Pages/Account/Invoice.js";
+import Settings from "./views/Pages/Account/Settings.js";
+import Alerts from "./views/Pages/Alerts";
+import Charts from "./views/Pages/Charts.js";
+import Pricing from "./views/Pages/Pricing.js";
+import Overview from "./views/Pages/Profile/Overview.js";
+import Projects from "./views/Pages/Profile/Projects.js";
+import Teams from "./views/Pages/Profile/Teams.js";
+import General from "./views/Pages/Projects/General.js";
+import Timeline from "./views/Pages/Projects/Timeline.js";
+import RTLPage from "./views/Pages/RTLPage.js";
+import NewUser from "./views/Pages/Users/NewUser.js";
+import Reports from "./views/Pages/Users/Reports.js";
+import Widgets from "./views/Pages/Widgets.js";
 
 const dashRoutes = [
   {
-    name: "Dashboard",
-    path: "/dashboard",
+    name: "Início",
+    path: "/dashboard/default",
     icon: <HomeIcon color='inherit' />,
     authIcon: <HomeIcon color='inherit' />,
     collapse: true,
@@ -71,16 +60,25 @@ const dashRoutes = [
         component: Default,
         layout: "/admin",
       },
-      {
-        name: "CRM",
-        path: "/dashboard/crm",
-        component: CRM,
-        layout: "/admin",
-      },
     ],
   },
   {
-    name: "PAGES",
+  name: "Cripto Exchange Pro",
+  path: "/dashboard/default",
+  icon: <StatsIcon color='inherit' />,
+  authIcon: <StatsIcon color='inherit' />,
+  collapse: true,
+  items: [
+    {
+      name: "Trading Screen",
+      path: "/dashboard/ts",
+      component: Default,
+      layout: "/admin",
+    },
+  ],
+},
+  {
+    name: "PARA SEU NEGÓCIO",
     category: "pages",
     items: [
       {

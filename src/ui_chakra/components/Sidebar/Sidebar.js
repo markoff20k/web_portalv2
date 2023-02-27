@@ -1,19 +1,4 @@
-/*!
 
-=========================================================
-* Vision UI PRO Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-dashboard-pro-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 /*eslint-disable*/
 import { HamburgerIcon, QuestionIcon } from "@chakra-ui/icons";
@@ -42,17 +27,17 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import SidebarHelpImage from "assets/img/SidebarHelpImage.png";
-import IconBox from "components/Icons/IconBox";
-import { SimmmpleLogoWhite } from "components/Icons/Icons";
+import IconBox from "../../components/Icons/IconBox";
+import { SimmmpleLogoWhite } from "../../components/Icons/Icons";
 import {
   renderThumb,
   renderTrack,
   renderTrackRTL,
   renderView,
   renderViewRTL,
-} from "components/Scrollbar/Scrollbar";
-import { HSeparator } from "components/Separator/Separator";
-import { SidebarContext } from "contexts/SidebarContext";
+} from "../../components/Scrollbar/Scrollbar";
+import { HSeparator } from "../../components/Separator/Separator";
+import { SidebarContext } from "../../contexts/SidebarContext";
 import PropTypes from "prop-types";
 import React from "react";
 import { Scrollbars } from "react-custom-scrollbars-2";

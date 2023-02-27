@@ -44,20 +44,20 @@ import {
 import bgCardReports from "assets/img/background-card-reports.png";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import IconBox from "components/Icons/IconBox";
-import TablesReportsRow from "components/Tables/TablesReportsRow";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import IconBox from "../../../components/Icons/IconBox";
+import TablesReportsRow from "../../../components/Tables/TablesReportsRow";
 
 // Icons
-import { CartIcon, RocketIcon } from "components/Icons/Icons";
+import { CartIcon, RocketIcon } from "../../../components/Icons/Icons";
 import { AiFillLike } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
-import { IoEllipsisHorizontalSharp } from "react-icons/io5";
+// import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 
 // Data
-import { tablesReportsData } from "variables/general";
+import { tablesReportsData } from "../../../variables/general";
 
 function Reports() {
   // Ellipsis Modals
@@ -106,12 +106,12 @@ function Reports() {
                   </IconBox>
                   <Menu isOpen={isOpen1} onClose={onClose1}>
                     <MenuButton onClick={onOpen1} alignSelf='flex-start'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisHorizontalSharp}
                         color='gray.400'
                         w='20px'
                         h='20px'
-                      />
+                      /> */}
                     </MenuButton>
                     <MenuList
                       border='transparent'
@@ -200,12 +200,12 @@ function Reports() {
                   </IconBox>
                   <Menu isOpen={isOpen2} onClose={onClose2}>
                     <MenuButton onClick={onOpen2} alignSelf='flex-start'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisHorizontalSharp}
                         color='gray.400'
                         w='20px'
                         h='20px'
-                      />
+                      /> */}
                     </MenuButton>
                     <MenuList
                       border='transparent'
@@ -294,12 +294,12 @@ function Reports() {
                   </IconBox>
                   <Menu isOpen={isOpen3} onClose={onClose3}>
                     <MenuButton onClick={onOpen3} alignSelf='flex-start'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisHorizontalSharp}
                         color='gray.400'
                         w='20px'
                         h='20px'
-                      />
+                      /> */}
                     </MenuButton>
                     <MenuList
                       border='transparent'
@@ -388,12 +388,12 @@ function Reports() {
                   </IconBox>
                   <Menu isOpen={isOpen4} onClose={onClose4}>
                     <MenuButton onClick={onOpen4} alignSelf='flex-start'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisHorizontalSharp}
                         color='gray.400'
                         w='20px'
                         h='20px'
-                      />
+                      /> */}
                     </MenuButton>
                     <MenuList
                       border='transparent'

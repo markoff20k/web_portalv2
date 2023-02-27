@@ -20150,7 +20150,7 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
-"three@0.109.0":
+"three@^0.109.0":
   "integrity" "sha512-XT99T3Hvgh2CEvwPdHYEunNE+clLK6KiT1U8En7YOgIqTUw4MrLeIc8zxQAJ6wbP8hhJaY5+Cff3jwBPpBa0gA=="
   "resolved" "https://registry.npmjs.org/three/-/three-0.109.0.tgz"
   "version" "0.109.0"

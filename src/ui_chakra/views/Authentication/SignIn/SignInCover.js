@@ -36,8 +36,8 @@ import {
 import signInImage from "assets/img/signInImage.png";
 
 // Custom Components
-import AuthFooter from "components/Footer/AuthFooter";
-import GradientBorder from "components/GradientBorder/GradientBorder";
+import AuthFooter from "../../../components/Footer/AuthFooter";
+import GradientBorder from "../../../components/GradientBorder/GradientBorder";
 
 function SignInCover() {
   // Chakra color mode

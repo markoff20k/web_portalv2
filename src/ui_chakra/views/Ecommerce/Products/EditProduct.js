@@ -44,10 +44,10 @@ import {
 import productImage1 from "assets/img/product-page-1.png";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import Editor from "components/Editor/Editor";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import Editor from "../../../components/Editor/Editor";
 import { useDropzone } from "react-dropzone";
 
 function EditProduct() {

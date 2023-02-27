@@ -15,6 +15,8 @@
 
 */
 
+import React from 'react';
+
 import { Box, Button, Flex, Icon, Spacer, Text } from "@chakra-ui/react";
 
 function InvoicesRow(props) {

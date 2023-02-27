@@ -21,19 +21,19 @@ import React from "react";
 import { Box, Grid, Text } from "@chakra-ui/react";
 
 // Custom Components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
+import Card from "../../components/Card/Card";
+import CardBody from "../../components/Card/CardBody";
+import CardHeader from "../../components/Card/CardHeader";
 
 // Charts
-import BarChart from "components/Charts/BarChart";
-import BubbleChart from "components/Charts/BubbleChart";
-import DonutChart from "components/Charts/DonutChart";
-import LineBarChart from "components/Charts/LineBarChart";
-import LineChart from "components/Charts/LineChart";
-import PieChart from "components/Charts/PieChart";
-import PolarChart from "components/Charts/PolarChart";
-import RadarChart from "components/Charts/RadarChart";
+import BarChart from "../../components/Charts/BarChart";
+import BubbleChart from "../../components/Charts/BubbleChart";
+import DonutChart from "../../components/Charts/DonutChart";
+import LineBarChart from "../../components/Charts/LineBarChart";
+import LineChart from "../../components/Charts/LineChart";
+import PieChart from "../../components/Charts/PieChart";
+import PolarChart from "../../components/Charts/PolarChart";
+import RadarChart from "../../components/Charts/RadarChart";
 
 // Data
 
@@ -58,7 +58,7 @@ import {
   polarChartOptionsCharts,
   radarChartDataCharts,
   radarChartOptionsCharts,
-} from "variables/charts";
+} from "../../variables/charts";
 
 function Charts() {
   return (

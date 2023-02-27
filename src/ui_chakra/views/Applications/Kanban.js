@@ -35,7 +35,7 @@ import {
 } from "@chakra-ui/react";
 
 // Custom Components
-import { VSeparator } from "components/Separator/Separator";
+import { VSeparator } from "../../components/Separator/Separator";
 import Board from "@asseinfo/react-kanban";
 
 // Assets
@@ -189,8 +189,8 @@ function Kanban() {
             { title },
             { removeColumn, renameColumn, addCard }
           ) {
-            const kanbanForm = useRef(null);
-            const cardInput = useRef(null);
+            const kanbanForm = 0;
+            const cardInput = 0;
             function kanbanFormOpen() {
               kanbanForm.current.style.display = "flex";
             }

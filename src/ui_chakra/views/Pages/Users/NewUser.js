@@ -35,9 +35,9 @@ import {
 } from "@chakra-ui/react";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
 import React, { useRef, useState } from "react";
 import { BsCircleFill } from "react-icons/bs";
 

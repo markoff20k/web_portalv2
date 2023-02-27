@@ -1,22 +1,7 @@
-/*!
-
-=========================================================
-* Vision UI PRO Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-dashboard-pro-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 // Chakra Imports
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
+
 import {
   Box,
   Breadcrumb,
@@ -24,10 +9,14 @@ import {
   BreadcrumbLink,
   Flex,
   Icon,
+  IconButton,
+  Input,
+  InputLeftElement,
+  InputGroup,
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { SidebarContext } from "contexts/SidebarContext";
+import { SidebarContext } from "../../contexts/SidebarContext";
 import PropTypes from "prop-types";
 import React, { useContext, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
@@ -52,7 +41,9 @@ export default function AdminNavbar(props) {
   } = props;
 
   // Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
-  let mainText = "white";
+  let mainBrand = "white";
+  let mainText = "#f54";
+  let searchIcon = "white";
   let secondaryText = "gray.400";
   let navbarPosition = "absolute";
   let navbarFilter = "none";
@@ -130,11 +121,11 @@ export default function AdminNavbar(props) {
           md: "row",
         }}
         alignItems={{ xl: "center" }}>
-        <Box mb={{ sm: "8px", md: "0px" }}>
+        {/* <Box mb={{ sm: "8px", md: "0px" }}>
           <Breadcrumb>
             <BreadcrumbItem color={mainText}>
               <BreadcrumbLink href='#' color={secondaryText}>
-                Pages
+                Páginas
               </BreadcrumbLink>
             </BreadcrumbItem>
 
@@ -144,7 +135,7 @@ export default function AdminNavbar(props) {
               </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
-          {/* Here we create navbar brand, based on route name */}
+          
           <Link
             color={mainText}
             href='#'
@@ -162,7 +153,7 @@ export default function AdminNavbar(props) {
             }}>
             {brandText}
           </Link>
-        </Box>
+        </Box> */}
         {toggleSidebar ? (
           <Icon
             as={CgMenuRight}
@@ -191,6 +182,53 @@ export default function AdminNavbar(props) {
             }}
           />
         )}
+    <InputGroup
+        color='gray.400'
+        bg='#272C35'
+        border='0.5px solid'
+        borderColor='#E2E8F04D'
+        borderRadius='20px'
+        cursor='pointer'
+        // bg={inputBg}
+        // borderRadius='15px'
+        w={{
+          sm: "128px",
+          md: "430px",
+        }}
+        me={{ sm: "auto", md: "20px" }}
+        _focus={{
+          borderColor: { mainBrand },
+        }}
+        _active={{
+          borderColor: { mainBrand },
+        }}>
+        <InputLeftElement
+          children={
+            <IconButton
+              bg='inherit'
+              borderRadius='inherit'
+              _hover='none'
+              _active={{
+                bg: "inherit",
+                transform: "none",
+                borderColor: "transparent",
+              }}
+              _focus={{
+                boxShadow: "none",
+              }}
+              icon={
+                <SearchIcon color={searchIcon} w='15px' h='15px' />
+              }></IconButton>
+          }
+        />
+        <Input
+          fontSize='xs'
+          py='11px'
+          color={mainText}
+          placeholder='Buscar'
+          borderRadius='inherit'
+        />
+      </InputGroup>
         <Box ms='auto' w={{ sm: "100%", md: "unset" }}>
           <AdminNavbarLinks
             onOpen={props.onOpen}

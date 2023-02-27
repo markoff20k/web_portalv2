@@ -36,8 +36,8 @@ import {
 import basic from "assets/img/basic-auth.png";
 
 // Custom components
-import Footer from "components/Footer/Footer";
-import GradientBorder from "components/GradientBorder/GradientBorder";
+import Footer from "../../../components/Footer/Footer";
+import GradientBorder from "../../../components/GradientBorder/GradientBorder";
 
 // Icons
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";

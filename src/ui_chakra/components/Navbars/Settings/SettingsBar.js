@@ -27,7 +27,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { SettingsIcon } from "components/Icons/Icons";
+import { SettingsIcon } from "../../../components/Icons/Icons";
 import React from "react";
 
 export function SettingsBar() {
@@ -54,14 +54,14 @@ export function SettingsBar() {
           <DrawerHeader>Create your account</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder='Type here...' />
+            <Input placeholder='Buscar...' />
           </DrawerBody>
 
           <DrawerFooter>
             <Button variant='outline' me={3} onClick={onClose}>
-              Cancel
+              Cancelar
             </Button>
-            <Button colorScheme='blue'>Save</Button>
+            <Button colorScheme='blue'>Salvar</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

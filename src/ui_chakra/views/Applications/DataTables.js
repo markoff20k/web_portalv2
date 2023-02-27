@@ -21,15 +21,15 @@ import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 
 // Custom Components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import BasicTable from "components/Tables/BasicTable";
-import SearchTable1 from "components/Tables/SearchTable1";
+import Card from "../../components/Card/Card";
+import CardBody from "../../components/Card/CardBody";
+import CardHeader from "../../components/Card/CardHeader";
+import BasicTable from "../../components/Tables/BasicTable";
+import SearchTable1 from "../../components/Tables/SearchTable1";
 
 // Data
-import { columnsData1 } from "variables/columnsData";
-import tableData1 from "variables/tableData1.json";
+import { columnsData1 } from "../../variables/columnsData";
+import tableData1 from "../../variables/tableData1.json";
 
 function DataTables() {
   return (

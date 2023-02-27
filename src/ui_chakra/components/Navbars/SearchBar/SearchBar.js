@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Vision UI PRO Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-dashboard-pro-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import React from "react";
 import {
@@ -34,12 +18,12 @@ export function SearchBar(props) {
     <InputGroup
       bg={inputBg}
       borderRadius='15px'
-      w='200px'
+      w='400px'
       _focus={{
-        borderColor: { mainTeal },
+        borderColor: { mainCyan },
       }}
       _active={{
-        borderColor: { mainTeal },
+        borderColor: { mainCyan },
       }}>
       <InputLeftElement
         children={
@@ -63,7 +47,7 @@ export function SearchBar(props) {
       <Input
         fontSize='xs'
         py='11px'
-        placeholder='Type here...'
+        placeholder='Buscar'
         borderRadius='inherit'
       />
     </InputGroup>

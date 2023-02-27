@@ -119,7 +119,7 @@ import Status from "../../template_react_status/src/components/App";
 import { ProfileScreen2 } from 'screens/ProfileScreen2';
 
 
-import Default from "../../ui_chakra/views/Dashboard/Default.js";
+import Dashboard from "../../ui_chakra/layouts/Admin.js";
 
 interface ReduxProps {
 	colorTheme: string;
@@ -196,7 +196,7 @@ const PublicRoute: React.FunctionComponent<any> = ({ component: CustomComponent,
 	if (isLogged) {
 		return (
 			<Route {...rest}>
-				<Redirect to={'/dash'} />
+				<Redirect to={'/admin/dashboard/default'} />
 			</Route>
 		);
 	}
@@ -550,7 +550,10 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
 					
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileScreen2} />
 
-					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/dashboard/default" component={Default} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/dashboard/default" component={Dashboard} />
+					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/admin/dashboard/ts/:market?" component={TradingScreen} />
+
+					
 					
 					{/*Wallets*/}
 					<PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/dash" exact component={WalletsScreen} />

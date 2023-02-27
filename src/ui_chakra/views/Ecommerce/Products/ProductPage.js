@@ -49,9 +49,9 @@ import productPage4 from "assets/img/product-page-4.png";
 import productPage5 from "assets/img/product-page-5.png";
 
 // Custom Components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
 
 // Icons
 import { BsStarFill, BsStarHalf } from "react-icons/bs";

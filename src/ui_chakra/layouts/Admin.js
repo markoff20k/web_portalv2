@@ -1,45 +1,28 @@
-/*!
 
-=========================================================
-* Vision UI PRO Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-dashboard-pro-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Chakra imports
 import {
   ChakraProvider,
   Portal,
   useDisclosure,
   ColorModeScript,
 } from "@chakra-ui/react";
-import "assets/css/vud-dashboard-styles.css";
-import Configurator from "components/Configurator/Configurator";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin";
-import Footer from "components/Footer/Footer.js";
+import "./vud-dashboard-styles.css";
+import Configurator from "../components/Configurator/Configurator";
+import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
+import Footer from "../components/Footer/Footer.js";
 // Custom components
-import MainPanel from "components/Layout/MainPanel";
-import PanelContainer from "components/Layout/PanelContainer";
-import PanelContent from "components/Layout/PanelContent";
+import MainPanel from "../components/Layout/MainPanel";
+import PanelContainer from "../components/Layout/PanelContainer";
+import PanelContent from "../components/Layout/PanelContent";
 // Layout components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
-import { SidebarContext } from "contexts/SidebarContext";
+import AdminNavbar from "../components/Navbars/AdminNavbar.js";
+import Sidebar from "../components/Sidebar/Sidebar.js";
+import { SidebarContext } from "../contexts/SidebarContext";
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css"; // ES6
 import { Redirect, Route, Switch } from "react-router-dom";
-import routes from "routes.js";
+import routes from "../routes.js";
 // Custom Chakra theme
-import theme from "theme/themeAdmin.js";
+import theme from "../theme/themeAdmin.js";
 export default function Dashboard(props) {
   const { ...rest } = props;
   // states and functions
@@ -137,7 +120,7 @@ export default function Dashboard(props) {
           }}>
           <Sidebar
             routes={routes}
-            logoText={"VISION UI PRO"}
+            logoText={"FORTEM ONE"}
             display='flex'
             sidebarVariant={sidebarVariant}
             {...rest}
@@ -151,7 +134,7 @@ export default function Dashboard(props) {
             <Portal>
               <AdminNavbar
                 onOpen={onOpen}
-                logoText={"VISION UI PRO"}
+                logoText={"FORTEM ONE"}
                 brandText={getActiveRoute(routes)}
                 secondary={getActiveNavbar(routes)}
                 fixed={fixed}

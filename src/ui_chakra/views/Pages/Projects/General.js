@@ -39,11 +39,11 @@ import * as GradientProgress from "@delowar/react-circle-progressbar";
 import avatar1 from "assets/img/avatars/avatar1.png";
 import generalBg from "assets/img/generalBg.png";
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import LineChart from "../../../components/Charts/LineChart";
+import IconBox from "../../../components/Icons/IconBox";
 import {
   CartIcon,
   DocumentIcon,
@@ -51,17 +51,17 @@ import {
   HomeIcon,
   LightningWhiteIcon,
   WalletIcon,
-} from "components/Icons/Icons";
-import { HSeparator } from "components/Separator/Separator";
+} from "../../../components/Icons/Icons";
+import { HSeparator } from "../../../components/Separator/Separator";
 import React from "react";
 import { BsCircleFill } from "react-icons/bs";
-import { IoEllipsisHorizontalSharp } from "react-icons/io5";
+// import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 import {
   lineChartDataGeneral1,
   lineChartDataGeneral2,
   lineChartOptionsGeneral1,
   lineChartOptionsGeneral2,
-} from "variables/charts";
+} from "../../../variables/charts";
 
 function General() {
   const iconBoxInside = "white";
@@ -152,7 +152,7 @@ function General() {
                 w='100%'>
                 <Stat me='auto'>
                   <StatLabel fontSize='xs' color='gray.400' pb='.1rem'>
-                    Today's Money
+                    Patrimônio Total
                   </StatLabel>
                   <Flex>
                     <StatNumber fontSize='lg' color='#fff'>
@@ -185,7 +185,7 @@ function General() {
                 w='100%'>
                 <Stat me='auto'>
                   <StatLabel fontSize='xs' color='gray.400' pb='.1rem'>
-                    New Clients
+                    Disponível em Reais
                   </StatLabel>
                   <Flex>
                     <StatNumber fontSize='lg' color='#fff'>
@@ -218,7 +218,7 @@ function General() {
                 w='100%'>
                 <Stat me='auto'>
                   <StatLabel fontSize='xs' color='gray.400' pb='.1rem'>
-                    Today's Users
+                    Disponível em Cripto
                   </StatLabel>
                   <Flex>
                     <StatNumber fontSize='lg' color='#fff'>
@@ -251,7 +251,7 @@ function General() {
                 w='100%'>
                 <Stat me='auto'>
                   <StatLabel fontSize='xs' color='gray.400' pb='.1rem'>
-                    Total Sales
+                    Disponível em Tokens
                   </StatLabel>
                   <Flex>
                     <StatNumber fontSize='lg' color='#fff'>
@@ -435,13 +435,13 @@ function General() {
                         Check status
                       </Text>
                     </Flex>
-                    <Icon
+                    {/* <Icon
                       as={IoEllipsisHorizontalSharp}
                       color='#fff'
                       w='20px'
                       h='20px'
                       cursor='pointer'
-                    />
+                    /> */}
                   </Flex>
                   <Stack
                     direction='row'
@@ -502,13 +502,13 @@ function General() {
                         Management discussion
                       </Text>
                     </Flex>
-                    <Icon
+                    {/* <Icon
                       as={IoEllipsisHorizontalSharp}
                       color='#fff'
                       w='20px'
                       h='20px'
                       cursor='pointer'
-                    />
+                    /> */}
                   </Flex>
                   <Stack
                     direction='row'
@@ -569,13 +569,13 @@ function General() {
                         New channel distribution
                       </Text>
                     </Flex>
-                    <Icon
+                    {/* <Icon
                       as={IoEllipsisHorizontalSharp}
                       color='#fff'
                       w='20px'
                       h='20px'
                       cursor='pointer'
-                    />
+                    /> */}
                   </Flex>
                   <Stack
                     direction='row'
@@ -637,13 +637,13 @@ function General() {
                         IOS App development
                       </Text>
                     </Flex>
-                    <Icon
+                    {/* <Icon
                       as={IoEllipsisHorizontalSharp}
                       color='#fff'
                       w='20px'
                       h='20px'
                       cursor='pointer'
-                    />
+                    /> */}
                   </Flex>
                   <Stack
                     direction='row'

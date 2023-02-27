@@ -54,14 +54,14 @@ import avatar9 from "assets/img/avatars/avatar9.png";
 import teamsImage from "assets/img/teams-image.png";
 
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import { HSeparator } from "components/Separator/Separator.js";
+import Card from "../../../components/Card/Card.js";
+import CardBody from "../../../components/Card/CardBody.js";
+import CardHeader from "../../../components/Card/CardHeader.js";
+import { HSeparator } from "../../../components/Separator/Separator.js";
 
 // Icons
 import { AiFillLike, AiOutlinePlus } from "react-icons/ai";
-import { InvisionLogo, SlackLogo } from "components/Icons/Icons";
+import { InvisionLogo, SlackLogo } from "../../../components/Icons/Icons";
 import {
   FaCommentDots,
   FaCube,
@@ -70,7 +70,7 @@ import {
   FaPlus,
 } from "react-icons/fa";
 import { IoIosStar, IoMdShareAlt, IoMdStarHalf } from "react-icons/io";
-import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
+// import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
 
 // This reducer changes the active button based on the current state
 const reducer = (state, action) => {
@@ -211,7 +211,7 @@ function Teams() {
                   bg: "brand.200",
                 }}
                 me={{ base: "none", lg: "20px" }}
-                leftIcon={<Icon color='white' as={IoDocumentsSharp} me='6px' />}
+                // leftIcon={<Icon color='white' as={IoDocumentsSharp} me='6px' />}
                 onClick={() =>
                   dispatch({ type: "SWITCH_ACTIVE", payload: "teams" })
                 }
@@ -654,12 +654,12 @@ function Teams() {
                 <Button variant='no-hover' p='0px'>
                   <Menu isOpen={isOpen1} onClose={onClose1}>
                     <MenuButton onClick={onOpen1} alignSelf='flex-start'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisVerticalSharp}
                         color='gray.400'
                         w='20px'
                         h='20px'
-                      />
+                      /> */}
                     </MenuButton>
                     <MenuList
                       border='transparent'
@@ -768,12 +768,12 @@ function Teams() {
                 <Button variant='no-hover' p='0px'>
                   <Menu isOpen={isOpen2} onClose={onClose2}>
                     <MenuButton onClick={onOpen2} alignSelf='flex-start'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisVerticalSharp}
                         color='gray.400'
                         w='20px'
                         h='20px'
-                      />
+                      /> */}
                     </MenuButton>
                     <MenuList
                       border='transparent'

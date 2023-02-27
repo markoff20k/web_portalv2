@@ -36,8 +36,8 @@ import {
 import illustration from "assets/img/illustration-auth.png";
 
 // Custom components
-import GradientBorder from "components/GradientBorder/GradientBorder";
-import AuthFooter from "components/Footer/AuthFooter";
+import GradientBorder from "../../../components/GradientBorder/GradientBorder";
+import AuthFooter from "../../../components/Footer/AuthFooter";
 
 function SignInIllustration() {
   // Chakra color mode

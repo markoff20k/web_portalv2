@@ -30,16 +30,16 @@ import {
 } from "@chakra-ui/react";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import SearchTable2 from "components/Tables/SearchTable2";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import SearchTable2 from "../../../components/Tables/SearchTable2";
 
 // Icons
 import { IoIosArrowDown } from "react-icons/io";
 
 // Data
-import { columnsData2 } from "variables/columnsData";
-import tableData2 from "variables/tableData2.json";
+import { columnsData2 } from "../../../variables/columnsData";
+import tableData2 from "../../../variables/tableData2.json";
 
 function OrderList() {
   return (

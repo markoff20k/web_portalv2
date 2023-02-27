@@ -36,13 +36,13 @@ import {
 import basic from "assets/img/basic-auth.png";
 
 // Custom components
-import GradientBorder from "components/GradientBorder/GradientBorder";
+import GradientBorder from "../../../components/GradientBorder/GradientBorder";
 
 // Icons
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 
 // Footer
-import Footer from "components/Footer/Footer";
+import Footer from "../../../components/Footer/Footer";
 
 function SignInBasic() {
   const titleColor = "white";

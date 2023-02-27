@@ -36,25 +36,25 @@ import avatar2 from "assets/img/avatars/avatar2.png";
 import avatar3 from "assets/img/avatars/avatar3.png";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import EventCalendar from "components/Calendars/EventCalendar";
-import { VSeparator } from "components/Separator/Separator";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
+import Card from "../../components/Card/Card";
+import CardBody from "../../components/Card/CardBody";
+import CardHeader from "../../components/Card/CardHeader";
+import EventCalendar from "../../components/Calendars/EventCalendar";
+import { VSeparator } from "../../components/Separator/Separator";
+import LineChart from "../../components/Charts/LineChart";
+import IconBox from "../../components/Icons/IconBox";
 
 // Icons
-import { ClockIcon, DocumentIcon, WalletIcon } from "components/Icons/Icons";
+import { ClockIcon, DocumentIcon, WalletIcon } from "../../components/Icons/Icons";
 import { FaShip } from "react-icons/fa";
 import { AddIcon } from "@chakra-ui/icons";
-import { calendarDataCalendar } from "variables/calendar";
+import { calendarDataCalendar } from "../../variables/calendar";
 
 // Data
 import {
   lineChartDataCalendar,
   lineChartOptionsCalendar,
-} from "variables/charts";
+} from "../../variables/charts";
 
 function Calendar() {
   const textColor = "white";

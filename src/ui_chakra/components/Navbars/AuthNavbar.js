@@ -39,11 +39,11 @@ import {
 } from "@chakra-ui/react";
 
 // Custom components
-import IconBox from "components/Icons/IconBox";
-import { SidebarResponsive } from "components/Sidebar/Sidebar";
+import IconBox from "../../components/Icons/IconBox";
+import { SidebarResponsive } from "../../components/Sidebar/Sidebar";
 
 // React icons
-import { RocketIcon } from "components/Icons/Icons";
+import { RocketIcon } from "../../components/Icons/Icons";
 import { AiFillStar } from "react-icons/ai";
 import { GoChevronDown } from "react-icons/go";
 

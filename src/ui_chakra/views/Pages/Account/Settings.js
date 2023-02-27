@@ -50,10 +50,10 @@ import {
 import avatar11 from "assets/img/avatars/avatar11.png";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import { HSeparator } from "components/Separator/Separator";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import { HSeparator } from "../../../components/Separator/Separator";
 import { Element, Link } from "react-scroll";
 
 // Icons
@@ -62,14 +62,14 @@ import {
   InvisionLogo,
   SlackLogo,
   SpotifyLogo,
-} from "components/Icons/Icons";
+} from "../../../components/Icons/Icons";
 
 import { AiFillDelete } from "react-icons/ai";
 import { BsArrowRight, BsCircleFill, BsToggleOn } from "react-icons/bs";
 import { FaCube, FaUser } from "react-icons/fa";
 import { GiSmartphone } from "react-icons/gi";
 import { IoIosArrowUp, IoIosRocket, IoMdNotifications } from "react-icons/io";
-import { IoDocumentText } from "react-icons/io5";
+// import { IoDocumentText } from "react-icons/io5";
 import { MdPowerSettingsNew } from "react-icons/md";
 import { RiComputerLine } from "react-icons/ri";
 
@@ -282,13 +282,13 @@ function Settings() {
                 _hover={{ bg: bgHoverLinks }}
                 w='100%'>
                 <Flex align='center' justifySelf='flex-start' w='100%'>
-                  <Icon
+                  {/* <Icon
                     as={IoDocumentText}
                     me='12px'
                     w='18px'
                     h='18px'
                     color='#fff'
-                  />
+                  /> */}
                   <Text color='#fff' fontWeight='500' fontSize='xs'>
                     Basic Info
                   </Text>

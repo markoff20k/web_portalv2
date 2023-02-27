@@ -39,29 +39,29 @@ import CRMimage from "assets/img/CRM-image.png";
 import medusa from "assets/img/cardimgfree.png";
 
 // Custom components
-import EventCalendar from "components/Calendars/EventCalendar";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
-import TransactionRow from "components/Tables/TransactionRow";
+import EventCalendar from "../../components/Calendars/EventCalendar";
+import Card from "../../components/Card/Card.js";
+import CardBody from "../../components/Card/CardBody.js";
+import CardHeader from "../../components/Card/CardHeader.js";
+import LineChart from "../../components/Charts/LineChart";
+import IconBox from "../../components/Icons/IconBox";
+import TransactionRow from "../../components/Tables/TransactionRow";
 
 // Icons
-import { DocumentIcon, RocketIcon, SettingsIcon } from "components/Icons/Icons";
+import { DocumentIcon, RocketIcon, SettingsIcon } from "../../components/Icons/Icons";
 import { BsArrowRight } from "react-icons/bs";
 import { FaPlus, FaRegCalendarAlt } from "react-icons/fa";
 import { RiArrowDropRightLine } from "react-icons/ri";
 
 // Data
-import { calendarDataCRM } from "variables/calendar";
+import { calendarDataCRM } from "../../variables/calendar";
 import {
   lineChartDataCRM1,
   lineChartDataCRM2,
   lineChartOptionsCRM1,
   lineChartOptionsCRM2,
-} from "variables/charts";
-import { revenueCRM, transactionsCRM } from "variables/general";
+} from "../../variables/charts";
+import { revenueCRM, transactionsCRM } from "../../variables/general";
 
 function CRM() {
   return (

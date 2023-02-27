@@ -43,14 +43,14 @@ import BackgroundCard1 from "assets/img/background-widgets-card.png";
 import BgMusicCard from "assets/img/background-widgets-music.png";
 
 // Custom Components
-import EventCalendar from "components/Calendars/EventCalendar";
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
-import { HSeparator } from "components/Separator/Separator";
-import TimelineRow from "components/Tables/TimelineRow";
+import EventCalendar from "../../components/Calendars/EventCalendar";
+import Card from "../../components/Card/Card";
+import CardBody from "../../components/Card/CardBody";
+import CardHeader from "../../components/Card/CardHeader";
+import LineChart from "../../components/Charts/LineChart";
+import IconBox from "../../components/Icons/IconBox";
+import { HSeparator } from "../../components/Separator/Separator";
+import TimelineRow from "../../components/Tables/TimelineRow";
 
 // Icons
 import {
@@ -59,7 +59,7 @@ import {
   RocketIcon,
   SettingsIcon,
   WalletIcon,
-} from "components/Icons/Icons";
+} from "../../components/Icons/Icons";
 
 // Icons
 import { AiFillBackward, AiFillForward } from "react-icons/ai";
@@ -77,7 +77,7 @@ import {
 import { RiArrowDropRightLine, RiMastercardFill } from "react-icons/ri";
 
 // Data
-import { calendarDataWidgets } from "variables/calendar";
+import { calendarDataWidgets } from "../../variables/calendar";
 import {
   lineChartDataWidgets1,
   lineChartDataWidgets2,
@@ -85,8 +85,8 @@ import {
   lineChartOptionsWidgets1,
   lineChartOptionsWidgets2,
   lineChartOptionsWidgets3,
-} from "variables/charts";
-import { timelineData } from "variables/general";
+} from "../../variables/charts";
+import { timelineData } from "../../variables/general";
 
 function Widgets() {
   const [toggleSwitch, setToggleSwitch] = useState(false);

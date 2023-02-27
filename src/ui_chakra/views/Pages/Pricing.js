@@ -45,10 +45,10 @@ import msnLogo from "assets/svg/msn-logo.svg";
 import zohoLogo from "assets/svg/zoho-logo.svg";
 
 // Custom Components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import { HSeparator } from "components/Separator/Separator";
+import Card from "../../components/Card/Card";
+import CardBody from "../../components/Card/CardBody";
+import CardHeader from "../../components/Card/CardHeader";
+import { HSeparator } from "../../components/Separator/Separator";
 
 // Icons
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";

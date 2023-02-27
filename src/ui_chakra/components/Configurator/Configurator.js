@@ -32,7 +32,7 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/react";
-import { HSeparator } from "components/Separator/Separator";
+import { HSeparator } from "../../components/Separator/Separator";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import GitHubButton from "react-github-btn";

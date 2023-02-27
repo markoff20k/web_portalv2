@@ -44,17 +44,17 @@ import {
 } from "@chakra-ui/react";
 
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import IconBox from "components/Icons/IconBox";
+import Card from "../../components/Card/Card.js";
+import CardBody from "../../components/Card/CardBody.js";
+import CardHeader from "../../components/Card/CardHeader.js";
+import IconBox from "../../components/Icons/IconBox";
 import * as GradientProgress from "@delowar/react-circle-progressbar";
-import DashboardTableRow from "components/Tables/DashboardTableRow";
-import TimelineRow from "components/Tables/TimelineRow";
+import DashboardTableRow from "../../components/Tables/DashboardTableRow";
+import TimelineRow from "../../components/Tables/TimelineRow";
 
 // Charts
-import BarChart from "components/Charts/BarChart";
-import LineChart from "components/Charts/LineChart";
+import BarChart from "../../components/Charts/BarChart";
+import LineChart from "../../components/Charts/LineChart";
 
 // Icons
 import {
@@ -64,16 +64,16 @@ import {
   RocketIcon,
   StatsIcon,
   WalletIcon,
-} from "components/Icons/Icons.js";
+} from "../../components/Icons/Icons.js";
 
 // Icons
 import { AiFillCheckCircle } from "react-icons/ai";
 import { BiHappy } from "react-icons/bi";
 import { BsArrowLeft } from "react-icons/bs";
-import {
-  IoCheckmarkDoneCircleSharp,
-  IoEllipsisHorizontal,
-} from "react-icons/io5";
+// import {
+//   IoCheckmarkDoneCircleSharp,
+//   IoEllipsisHorizontal,
+// } from "react-icons/io5";
 
 // Data
 import {
@@ -81,8 +81,8 @@ import {
   barChartOptionsDashboard,
   lineChartDataDashboard,
   lineChartOptionsDashboard,
-} from "variables/charts";
-import { dashboardTableData, timelineData } from "variables/general";
+} from "../../variables/charts";
+import { dashboardTableData, timelineData } from "../../variables/general";
 
 export default function Dashboard() {
   return (
@@ -368,7 +368,7 @@ export default function Dashboard() {
                 bg='#22234B'
                 _hover='none'
                 _active='none'>
-                <Icon as={IoEllipsisHorizontal} color='#7551FF' />
+                {/* <Icon as={IoEllipsisHorizontal} color='#7551FF' /> */}
               </Button>
             </Flex>
             <Flex direction={{ sm: "column", md: "row" }}>
@@ -641,13 +641,13 @@ export default function Dashboard() {
                 Projects
               </Text>
               <Flex align='center'>
-                <Icon
+                {/* <Icon
                   as={IoCheckmarkDoneCircleSharp}
                   color='teal.300'
                   w={4}
                   h={4}
                   pe='3px'
-                />
+                /> */}
                 <Text fontSize='sm' color='gray.400' fontWeight='500'>
                   <Text fontWeight='bold' as='span'>
                     30 done

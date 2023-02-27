@@ -35,10 +35,10 @@ import {
 
 // Assets
 import illustration from "assets/img/illustration-auth.png";
-import AuthFooter from "components/Footer/AuthFooter";
+import AuthFooter from "../../../components/Footer/AuthFooter";
 
 // Custom components
-import GradientBorder from "components/GradientBorder/GradientBorder";
+import GradientBorder from "../../../components/GradientBorder/GradientBorder";
 
 function SignUpIllustration() {
   // Chakra color mode

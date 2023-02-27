@@ -18,15 +18,15 @@
 // Chakra imports
 import { Stack, Text, useColorModeValue } from "@chakra-ui/react";
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import TimelineRow from "components/Tables/TimelineRow";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import TimelineRow from "../../../components/Tables/TimelineRow";
 import React from "react";
 import {
   timelineProjectsData1,
   timelineProjectsData2,
-} from "variables/general";
+} from "../../../variables/general";
 
 function Timeline() {
   return (

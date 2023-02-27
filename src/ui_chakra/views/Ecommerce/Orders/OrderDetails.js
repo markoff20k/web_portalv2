@@ -35,14 +35,14 @@ import {
 import productImage1 from "assets/img/product-page-1.png";
 
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import IconBox from "components/Icons/IconBox";
-import { HSeparator } from "components/Separator/Separator";
+import Card from "../../../components/Card/Card.js";
+import CardBody from "../../../components/Card/CardBody.js";
+import CardHeader from "../../../components/Card/CardHeader.js";
+import IconBox from "../../../components/Icons/IconBox";
+import { HSeparator } from "../../../components/Separator/Separator";
 
 // Icons
-import { MastercardIcon } from "components/Icons/Icons";
+import { MastercardIcon } from "../../../components/Icons/Icons";
 import { CgShapeCircle } from "react-icons/cg";
 import { FaPencilAlt } from "react-icons/fa";
 

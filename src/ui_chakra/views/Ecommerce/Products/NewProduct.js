@@ -51,16 +51,16 @@ import avatar11 from "assets/img/avatars/avatar11.png";
 import newProductBg from "assets/img/new-product-background.png";
 
 // Custom Components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import Editor from "components/Editor/Editor";
+import Card from "../../../components/Card/Card";
+import CardBody from "../../../components/Card/CardBody";
+import CardHeader from "../../../components/Card/CardHeader";
+import Editor from "../../../components/Editor/Editor";
 import { useDropzone } from "react-dropzone";
 
 // Icons
 import { BsCircleFill } from "react-icons/bs";
 import { FaCube, FaPencilAlt, FaPenFancy } from "react-icons/fa";
-import { IoDocumentsSharp } from "react-icons/io5";
+// import { IoDocumentsSharp } from "react-icons/io5";
 
 const reducer = (state, action) => {
   if (action.type === "SWITCH_ACTIVE") {
@@ -269,7 +269,7 @@ function NewProduct() {
                   onClick={() =>
                     dispatch({ type: "SWITCH_ACTIVE", payload: "teams" })
                   }>
-                  <Icon color='white' as={IoDocumentsSharp} me='6px' />
+                  {/* <Icon color='white' as={IoDocumentsSharp} me='6px' /> */}
                   <Text fontSize='xs' color={textColor} fontWeight='bold'>
                     TEAMS
                   </Text>

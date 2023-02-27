@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Vision UI PRO Chakra - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-dashboard-pro-chakra
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import React from "react";
 
@@ -63,6 +47,7 @@ import {
   RocketIcon,
   StatsIcon,
   WalletIcon,
+  
 } from "../../components/Icons/Icons.js";
 
 export default function Default() {
@@ -70,9 +55,9 @@ export default function Default() {
   const iconBoxInside = useColorModeValue("white", "white");
   return (
     <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
-      <Text color='#fff' fontWeight='bold' fontSize='3xl' mb='30px' ps='20px'>
+      {/* <Text color='#fff' fontWeight='bold' fontSize='3xl' mb='30px' ps='20px'>
         General Statistics
-      </Text>
+      </Text> */}
       <Grid
         templateColumns={{ sm: "4fr 1fr", xl: "1.2fr 1fr" }}
         gap='32px'
@@ -80,8 +65,8 @@ export default function Default() {
         w='100%'>
         {/* ThreeJS Globe */}
         <Box
-          minW='700px'
-          h='700px'
+          minW='200px'
+          h='200px'
           position='absolute'
           right='30px'
           top='14%'
@@ -96,8 +81,8 @@ export default function Default() {
           maxW={{ sm: "315px", md: "100%" }}
           zIndex='0'>
           {/* Mini Statistics */}
-          <SimpleGrid columns={{ sm: "1", md: "2" }} spacing='24px'>
-            <Card minH='83px'>
+          <SimpleGrid columns={{ sm: "1", md: "2" }} spacing='20px'>
+            <Card minH='180px' bg='#161D26'>
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -105,12 +90,12 @@ export default function Default() {
                   justify='center'
                   w='100%'>
                   <Stat me='auto'>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      Today's Money
+                    <StatLabel fontSize='18px' color='gray.400' pb='2px'>
+                      Patrimônio Total
                     </StatLabel>
                     <Flex>
-                      <StatNumber fontSize='lg' color='#fff'>
-                        $53,000
+                      <StatNumber fontSize='20px' color='#F5F5F5' fontWeight='700'>
+                        R$ 15.840.230
                       </StatNumber>
                       <StatHelpText
                         alignSelf='flex-end'
@@ -119,18 +104,18 @@ export default function Default() {
                         color='green.400'
                         fontWeight='bold'
                         ps='3px'
-                        fontSize='sm'>
+                        fontSize='md'>
                         +55%
                       </StatHelpText>
                     </Flex>
                   </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
+                  <IconBox as='box' h={"45px"} w={"45px"} bg='#009991'>
                     <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
                   </IconBox>
                 </Flex>
               </CardBody>
             </Card>
-            <Card minH='83px'>
+            <Card minH='180px' bg='#161D26'>
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -138,12 +123,12 @@ export default function Default() {
                   justify='center'
                   w='100%'>
                   <Stat>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      New Clients
+                    <StatLabel fontSize='18px' color='gray.400' pb='2px'>
+                      Disponível em Fiat
                     </StatLabel>
                     <Flex>
-                      <StatNumber fontSize='lg' color='#fff'>
-                        +$3,020
+                      <StatNumber fontSize='20px' color='#F5F5F5' fontWeight='700'>
+                        R$ 5.000.230
                       </StatNumber>
                       <StatHelpText
                         alignSelf='flex-end'
@@ -152,19 +137,19 @@ export default function Default() {
                         color='red.500'
                         fontWeight='bold'
                         ps='3px'
-                        fontSize='sm'>
+                        fontSize='md'>
                         -14%
                       </StatHelpText>
                     </Flex>
                   </Stat>
                   <Spacer />
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
+                  <IconBox as='box' h={"45px"} w={"45px"} bg='#009991'>
                     <DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />
                   </IconBox>
                 </Flex>
               </CardBody>
             </Card>
-            <Card minH='83px'>
+            <Card minH='180px' bg='#161D26'>
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -172,12 +157,12 @@ export default function Default() {
                   justify='center'
                   w='100%'>
                   <Stat me='auto'>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      Today's Users
+                    <StatLabel fontSize='18px' color='gray.400' pb='2px'>
+                      Disponível em Cripto
                     </StatLabel>
                     <Flex>
-                      <StatNumber fontSize='lg' color='#fff'>
-                        2,300
+                      <StatNumber fontSize='20px' color='#F5F5F5' fontWeight='700'>
+                        R$ 10.000.000
                       </StatNumber>
                       <StatHelpText
                         alignSelf='flex-end'
@@ -186,18 +171,18 @@ export default function Default() {
                         color='green.400'
                         fontWeight='bold'
                         ps='3px'
-                        fontSize='sm'>
+                        fontSize='md'>
                         +5%
                       </StatHelpText>
                     </Flex>
                   </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
+                  <IconBox as='box' h={"45px"} w={"45px"} bg='#009991'>
                     <GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />
                   </IconBox>
                 </Flex>
               </CardBody>
             </Card>
-            <Card minH='83px'>
+            <Card minH='180px' bg='#161D26'>
               <CardBody>
                 <Flex
                   flexDirection='row'
@@ -205,12 +190,12 @@ export default function Default() {
                   justify='center'
                   w='100%'>
                   <Stat me='auto'>
-                    <StatLabel fontSize='xs' color='gray.400' pb='2px'>
-                      Total Sales
+                    <StatLabel fontSize='18px' color='gray.400' pb='2px'>
+                      Disponível em Token
                     </StatLabel>
                     <Flex>
-                      <StatNumber fontSize='lg' color='#fff' fontWeight='bold'>
-                        173,000
+                      <StatNumber fontSize='20px' color='#F5F5F5' fontWeight='700'>
+                        R$ 640.230
                       </StatNumber>
                       <StatHelpText
                         alignSelf='flex-end'
@@ -219,13 +204,13 @@ export default function Default() {
                         color='green.400'
                         fontWeight='bold'
                         ps='3px'
-                        fontSize='sm'>
+                        fontSize='md'>
                         +8%
                       </StatHelpText>
                     </Flex>
                   </Stat>
-                  <IconBox as='box' h={"45px"} w={"45px"} bg='brand.200'>
-                    <CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />
+                  <IconBox as='box' h={"45px"} w={"45px"} bg='#009991'>
+                    <RocketIcon h={"24px"} w={"24px"} color={iconBoxInside} />
                   </IconBox>
                 </Flex>
               </CardBody>
@@ -235,7 +220,7 @@ export default function Default() {
           <Card px='0px'>
             <CardHeader px='22px' mb='32px'>
               <Text color='#fff' fontSize='lg' fontWeight='bold'>
-                Sales by Country
+                Operações por país
               </Text>
             </CardHeader>
             <CardBody overflowX={{ sm: "scroll", md: "hidden" }}>
@@ -247,21 +232,21 @@ export default function Default() {
                       fontSize='10px'
                       fontFamily='Plus Jakarta Display'
                       borderColor='#56577A'>
-                      Country:
+                      País:
                     </Th>
                     <Th
                       color='gray.400'
                       fontSize='10px'
                       fontFamily='Plus Jakarta Display'
                       borderColor='#56577A'>
-                      Sales:
+                      Operações:
                     </Th>
                     <Th
                       color='gray.400'
                       fontSize='10px'
                       fontFamily='Plus Jakarta Display'
                       borderColor='#56577A'>
-                      Value:
+                      Valor:
                     </Th>
                     <Th
                       color='gray.400'
@@ -408,7 +393,7 @@ export default function Default() {
                 mb='36px'
                 alignSelf='flex-start'>
                 <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                  Active Users
+                  HFTs
                 </Text>
                 <Text fontSize='md' fontWeight='medium' color='gray.400'>
                   <Text as='span' color='green.400' fontWeight='bold'>
@@ -429,7 +414,7 @@ export default function Default() {
                       <WalletIcon h={"15px"} w={"15px"} color='#fff' />
                     </IconBox>
                     <Text fontSize='sm' color='gray.400'>
-                      Users
+                      Usuários
                     </Text>
                   </Flex>
                   <Text
@@ -459,7 +444,7 @@ export default function Default() {
                       <RocketIcon h={"15px"} w={"15px"} color='#fff' />
                     </IconBox>
                     <Text fontSize='sm' color='gray.400'>
-                      Clicks
+                      Ordens
                     </Text>
                   </Flex>
                   <Text
@@ -489,7 +474,7 @@ export default function Default() {
                       <CartIcon h={"15px"} w={"15px"} color='#fff' />
                     </IconBox>
                     <Text fontSize='sm' color='gray.400'>
-                      Sales
+                      Negócios
                     </Text>
                   </Flex>
                   <Text
@@ -547,13 +532,13 @@ export default function Default() {
           <CardHeader mb='20px' ps='22px'>
             <Flex direction='column' alignSelf='flex-start'>
               <Text fontSize='lg' color='#fff' fontWeight='bold' mb='6px'>
-                Sales Overview
+                Rendimento consolidado
               </Text>
               <Text fontSize='md' fontWeight='medium' color='gray.400'>
                 <Text as='span' color='green.400' fontWeight='bold'>
                   (+5%) more
                 </Text>{" "}
-                in 2021
+                in 2023
               </Text>
             </Flex>
           </CardHeader>

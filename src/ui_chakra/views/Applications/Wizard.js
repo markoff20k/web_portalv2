@@ -40,15 +40,15 @@ import {
 } from "@chakra-ui/react";
 
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
+import Card from "../../components/Card/Card";
+import CardBody from "../../components/Card/CardBody";
+import CardHeader from "../../components/Card/CardHeader";
 
 // Images
 import avatar11 from "assets/img/avatars/avatar11.png";
 
 // Icons
-import { RocketIcon } from "components/Icons/Icons";
+import { RocketIcon } from "../../components/Icons/Icons";
 import { AiFillSetting } from "react-icons/ai";
 import { BsCircleFill } from "react-icons/bs";
 import { FaCube } from "react-icons/fa";

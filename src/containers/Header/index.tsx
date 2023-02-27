@@ -196,8 +196,6 @@ export const Header: React.FC = () => {
 					<div className="header__right-menu__dropdown__wrap">
 						<span className={classLinkActiveTitleDrop('account')}>
 							<FaUserCircle className="header__right-menu__dropdown__wrap__content__title__icon mr-2" />
-							Aristóteles Guimarães Jr.
-							{/*{translate('page.body.homepage.header.account')}*/}
 							<div className="header__right-menu__dropdown__wrap__dropbtn__icon-drop-down"> </div>
 						</span>
 						<div className="header__right-menu__dropdown__wrap__content header__right-menu__dropdown__wrap__content--account">
@@ -291,6 +289,21 @@ export const Header: React.FC = () => {
 		);
 	};
  
+	const renderMainMenu = () => {
+
+
+
+		return (
+			!isLoggedIn && (
+				<>
+					<AppContainer> <Menu duration={300}/> </AppContainer>
+				</>
+			)
+		);
+	};
+
+
+
 	return (
 		<>
 
@@ -558,6 +571,7 @@ export const Header: React.FC = () => {
 	*/}
 					<div className="header__right-menu d-flex align-items-center flex-row" style={{zIndex: 99999}}>
 						{renderUnLogin()}
+						
 						{renderProfileTab()}
 					</div>
 
@@ -567,11 +581,8 @@ export const Header: React.FC = () => {
 				</nav>
 			</div>
 
-			<AppContainer>
-
-<Menu duration={300}/>
-</AppContainer>
-
+			
+			{renderMainMenu()}
 
 			</header>
 

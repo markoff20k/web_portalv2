@@ -24,14 +24,14 @@ import { Box, Button, Flex, Grid, Icon, Spacer, Text } from "@chakra-ui/react";
 import BackgroundCard1 from "assets/img/billing-background-card.png";
 
 // Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import GradientBorder from "components/GradientBorder/GradientBorder";
-import BillingRow from "components/Tables/BillingRow";
-import InvoicesRow from "components/Tables/InvoicesRow";
-import TransactionRow from "components/Tables/TransactionRow";
-import IconBox from "components/Icons/IconBox";
+import Card from "../../../components/Card/Card.js";
+import CardBody from "../../../components/Card/CardBody.js";
+import CardHeader from "../../../components/Card/CardHeader.js";
+import GradientBorder from "../../../components/GradientBorder/GradientBorder";
+import BillingRow from "../../../components/Tables/BillingRow";
+import InvoicesRow from "../../../components/Tables/InvoicesRow";
+import TransactionRow from "../../../components/Tables/TransactionRow";
+import IconBox from "../../../components/Icons/IconBox";
 
 // Icons
 import {
@@ -39,9 +39,9 @@ import {
   GraphIcon,
   MastercardIcon,
   VisaIcon,
-} from "components/Icons/Icons";
+} from "../../../components/Icons/Icons";
 import { FaPencilAlt, FaRegCalendarAlt } from "react-icons/fa";
-import { IoEllipsisHorizontalSharp } from "react-icons/io5";
+// import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 import { RiMastercardFill } from "react-icons/ri";
 
 // Data
@@ -50,7 +50,7 @@ import {
   invoicesData,
   newestTransactions,
   olderTransactions,
-} from "variables/general";
+} from "../../../variables/general";
 
 function Billing() {
   return (
@@ -140,14 +140,14 @@ function Billing() {
                       _active='none'
                       alignSelf='flex-end'
                       p='0px'>
-                      <Icon
+                      {/* <Icon
                         as={IoEllipsisHorizontalSharp}
                         color='#fff'
                         w='24px'
                         h='24px'
                         justifySelf='flex-start'
                         alignSelf='flex-start'
-                      />
+                      /> */}
                     </Button>
                     <GraphIcon w='60px' h='18px' />
                   </Flex>

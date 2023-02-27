@@ -73,7 +73,8 @@ const RenderDeviceContainers = () => {
 
 	return (
 		<React.Fragment>
-            <HeaderContainer/>
+            
+			<HeaderContainer/>
             <HeaderAuthToolbar/>
 			<SidebarContainer />
             <CustomizationContainer/>
