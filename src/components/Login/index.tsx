@@ -10,7 +10,7 @@ import { EMAIL_REGEX } from '../../helpers';
 import { selectMobileDeviceState } from '../../modules/public/globalSettings';
 //import './style.css';
 
-const Logo = require('../../assets/images/logo_preta_bandeira_verde.svg');
+const Logo = require('../../assets/svg/bandeiraFortemVerde.svg');
 
 export interface LogInProps {
 	labelSignIn?: string;
@@ -123,7 +123,7 @@ const Login = React.memo((props: LogInProps) => {
 			}}
 		>
 			<div className="cr-sign-in-form__bottom-section-password" onClick={() => props.onForgotPassword(email)}>
-				{'Esqueceu sua senha?'}
+				{'Esqueci minha senha'}
 			</div>
 			<div
 				id="click-to-register"
@@ -217,7 +217,7 @@ const Login = React.memo((props: LogInProps) => {
 						/>
 						{emailError && <div className={'cr-sign-in-form__error'}>{emailError}</div>}
 				
-						<span className="input-group-text  bg-transparent" style={{marginTop: '110px', marginLeft: '0px', width: '40px', height: '38px'}}><i className="ti-lock"></i></span>
+						<span className="input-group-text  bg-transparent" style={{marginTop: '120px', marginLeft: '0px', width: '40px', height: '38px'}}><i className="ti-lock"></i></span>
 						<FormInput
 							classNameInput="input-login"
 							type="password"
@@ -236,12 +236,12 @@ const Login = React.memo((props: LogInProps) => {
 					{isMobileDevice && renderForgotButton}
 					<div className="cr-sign-in-form__button-wrapper">
 						<Button
-							block={false}
+							// block={false}
 							type="button"
 							disabled={isLoading || !email.match(EMAIL_REGEX) || !password}
 							onClick={handleClick as any}
 							size="lg"
-                            variant="login"
+                            variant="2FA"
 							
 						>
 							{isLoading ? 'Loading...' : labelSignIn ? labelSignIn : 'Entrar'}

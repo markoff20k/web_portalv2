@@ -561,7 +561,7 @@ export const pt = {
 	'page.forgotPassword': 'Recuperar senha',
 	'page.forgotPassword.message': 'Digite o email utilizado na criação da sua conta Fortem e enviaremos um link de reinicialização de senha.',
 	'page.password2fa': 'Autenticação em Duas Etapas',
-	'page.password2fa.message': 'Digite seu código 2FA de 6 dígitos',
+	'page.password2fa.message': 'Digite os números gerados para ativar a autenticação',
 	'page.forgotPassword.email': 'Digite seu email utilizado no cadastro',
 	'page.forgotPassword.send': 'Enviar',
 	'page.noDataToShow': 'Sem dados',

@@ -1,62 +1,4 @@
 
-
-.btn {
-
-  display: flex !important;
-  justify-content: center !important;
-  font-size: inherit;
-  font-weight: var(--button-font-weight) !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-
-
- 
-}
-
-.btn:active {
-
-  display: flex !important;
-  justify-content: center !important;
-  font-size: inherit;
-  font-weight: var(--button-font-weight) !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
- 
-}
-
-.btn:focus {
-
-  display: flex !important;
-  justify-content: center !important;
-  font-size: inherit;
-  font-weight: var(--button-font-weight) !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
- 
-}
-
-
-.btn:hover {
-
-  border: none;
-  box-shadow: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-
-}
-
 .btn-lg {
 
   width: 100% !important;
@@ -264,13 +206,15 @@
 		}
 
     .btn-2FA {
+      box-shadow: none !important;
       cursor: pointer;
-      border: 2px solid #009991 !important;
-      border-radius: 5px !important;
+      border: 1px solid transparent !important;
+      border-radius: 12px !important;
       width: 100% !important;
-    
-      color: var(--button-primary-cta-text-color);
-      font-weight: var(--button-font-weight);
+      background-color: #16837C !important;
+      color: #F7F9FC !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
     }
@@ -278,6 +222,7 @@
     
     .btn-2FA:active {
       
+      background-color: #16837C !important;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
     }
@@ -291,7 +236,7 @@
     
       .btn-2FA:disabled {
         background-color: #535353 !important;
-        border-color: #535353 !important;
+        
         
         color: var(--button-primary-cta-text-color-disabled);
         cursor: not-allowed;

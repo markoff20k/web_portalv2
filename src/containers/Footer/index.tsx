@@ -41,7 +41,7 @@ const renderFooterDesktop = (inputEmail, sendEmail, emailAddress) => {
 	return (
 
 		<div className="footerDesktop-screen">
-			<div className="white-line" style={{marginTop: '-12px'}}></div>
+			<div className="fortem-line"></div>
 			<div className="container-footer-screen">
 				<div className="footer d-flex flex-row justify-content-between ">
 					<div className="footer__logo">
